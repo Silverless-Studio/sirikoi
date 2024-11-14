@@ -1,0 +1,200 @@
+.page-layout {
+  &__default {
+    > .grid {
+      > * {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+
+  &__sidebar {
+    > .grid {
+      & > * {
+        grid-column: 1 / -1;
+      }
+
+      .sidebar__content {
+        grid-column: 5 / 11;
+      }
+
+      aside {
+        grid-column: 1 / 3;
+      }
+    }
+  }
+}
+
+.container {
+  // sass-lint:disable-block indentation
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns:
+    [full-start] minmax(calc(var(--container-margin) - var(--grid-gap)), 1fr)
+    [center-start] repeat(
+      12,
+      [col-start]
+        minmax(0.1rem, calc(($grid-width - (11 * var(--grid-gap))) / 12))
+        [col-end]
+    )
+    [center-end] minmax(calc(var(--container-margin) - var(--grid-gap)), 1fr)
+    [full-end];
+
+  .row {
+    grid-column: center-start / center-end;
+    position: relative;
+
+    &__extended {
+      grid-column: full-start / full-end;
+    }
+
+    &__12 {
+      grid-column: center-start / center-end;
+    }
+
+    &__11 {
+      grid-column: calc(var(--container-offset, 0) + 2) / span 11;
+
+      @include respond(tab-port) {
+        grid-column: center-start / center-end;
+      }
+    }
+
+    &__10 {
+      grid-column: calc(var(--container-offset, 1) + 2) / span 10;
+
+      @include respond(tab-port) {
+        grid-column: center-start / center-end;
+      }
+
+      .sidebar__content > & {
+        grid-column: center-start / center-end;
+      }
+    }
+
+    &__9 {
+      grid-column: calc(var(--container-offset, 1) + 2) / span 9;
+
+      @include respond(tab-port) {
+        grid-column: center-start / center-end;
+      }
+    }
+
+    &__8 {
+      grid-column: calc(var(--container-offset, 2) + 2) / span 8;
+
+      @include respond(tab-port) {
+        grid-column: center-start / center-end;
+      }
+    }
+
+    &__7 {
+      grid-column: calc(var(--container-offset, 2) + 2) / span 7;
+
+      @include respond(tab-port) {
+        grid-column: center-start / center-end;
+      }
+    }
+
+    &__6 {
+      grid-column: calc(var(--container-offset, 3) + 2) / span 6;
+
+      @include respond(tab-port) {
+        grid-column: center-start / center-end;
+      }
+    }
+  }
+}
+
+.embed-content {
+  .container {
+    gap: 1rem;
+    grid-template-columns: repeat(12, 1fr);
+
+    .row {
+      grid-column: 1 / -1;
+      position: relative;
+
+      &__12 {
+        grid-column: 1 / -1;
+      }
+
+      &__10 {
+        grid-column: 2 / -2;
+      }
+
+      &__8 {
+        grid-column: 1 / -1;
+      }
+
+      &__6 {
+        grid-column: 4 / -4;
+      }
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  gap: var(--grid-gap);
+
+  @include respond(phone) {
+    gap: calc(var(--grid-gap) * 2) var(--grid-gap);
+
+    &:not(&__non-responsive) > * {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @for $i from 1 through 12 {
+    &__#{$i} {
+      grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+    }
+
+    .col-span__#{$i} {
+      grid-column-end: span #{$i};
+
+      @include respond(phone) {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .col-offset__#{$i} {
+      grid-column-start: #{$i};
+    }
+  }
+
+  &:not(&__non-responsive) {
+    @include respond(tab-land) {
+      &.grid {
+        &__4 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+    }
+  }
+
+  .row {
+    grid-column: 1 / -1;
+    position: relative;
+
+    &__12 {
+      grid-column: 1 / -1;
+    }
+
+    &__10 {
+      grid-column: 2 / -2;
+    }
+
+    &__8 {
+      grid-column: 3 / -3;
+    }
+
+    &__6 {
+      grid-column: 4 / -4;
+    }
+  }
+
+  &.row-start__3 {
+    grid-column-start: 3;
+  }
+}

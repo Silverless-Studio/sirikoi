@@ -1,0 +1,69 @@
+body {
+  background-color: $page-border-color;
+  padding: $page-border-size;
+}
+
+.site {
+  background-color: $background-color;
+  overflow: clip;
+  position: relative;
+
+  &::before {
+    background-image: var(--background-image);
+    background-position: top center;
+    background-repeat: repeat;
+    content: '';
+    display: block;
+    inset: 0;
+    opacity: var(--background-image-opacity);
+    pointer-events: none;
+    position: absolute;
+    z-index: 0;
+  }
+
+  .page-layout {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+section {
+  background-color: var(--background-color);
+  scroll-margin-top: 10rem;
+}
+
+.fade-target {
+  img,
+  video {
+    &.fade {
+      opacity: 1;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+
+  &:hover {
+    img,
+    video {
+      &.fade {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+:root {
+  @include css-var(--grid-gap, $gutter-width);
+  @include css-var(--container-margin, $container-margin);
+
+  @include respond(tab-port) {
+    @include css-var(--grid-gap, 2rem);
+    @include css-var(--container-margin, 2rem);
+  }
+
+  @include respond(phone) {
+    @include css-var(--grid-gap, 1rem);
+    @include css-var(--container-margin, 1rem);
+  }
+
+  @include css-var(--background-color, transparent);
+}

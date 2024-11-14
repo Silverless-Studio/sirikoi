@@ -1,0 +1,108 @@
+.section-form {
+  // sass-lint:disable-block force-element-nesting, no-qualifying-elements, no-color-literals
+  .wsf-sections {
+    div.wsf-field-wrapper {
+      input.wsf-field,
+      textarea.wsf-field,
+      select.wsf-field,
+      button.wsf-button {
+        @include border(0);
+        background-color: $color-form-inputs;
+        color: $color-grey;
+        font-size: $default-font-size;
+        font-weight: 400;
+        height: auto;
+        line-height: 1.5;
+        padding: 0.75rem 1.5rem;
+      }
+
+      label.wsf-label {
+        color: $color-grey;
+        font-size: $default-font-size;
+        font-weight: 400;
+        line-height: 1.5rem;
+      }
+
+      input.wsf-field {
+        height: auto;
+        padding: 0.8rem 1rem;
+      }
+
+      .wsf-invalid-feedback {
+        font-size: 0.875rem;
+        letter-spacing: 0.02em;
+        line-height: 1.25rem;
+      }
+
+      button.wsf-button {
+        background: $color-secondary;
+        border: 1px solid $color-secondary;
+        border-radius: 0.5rem;
+        box-sizing: border-box;
+        color: $color-white;
+        display: inline-block;
+        font-family: $font-secondary;
+        font-size: 1.375rem;
+        line-height: 1.625rem;
+        padding: 0.5rem 1.75rem;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 0.3s ease-in-out;
+        width: max-content;
+
+        &:hover {
+          background: darken($color-secondary, 20%);
+          border-color: darken($color-secondary, 20%);
+        }
+      }
+
+      &.wsf-bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        @include respond(phone) {
+          .wsf-button-full {
+            flex-grow: 1;
+          }
+        }
+      }
+
+      .wsf-label-position-inside {
+        input,
+        textarea {
+          &.wsf-field {
+            &[placeholder] {
+              & + label {
+                left: 1.5rem;
+                top: 1rem;
+              }
+
+              &:not(:placeholder-shown),
+              &:focus {
+                border: 0;
+                box-shadow: none;
+                outline: none;
+
+                & + label {
+                  @include shadow($color-black, 0, 0.25rem);
+                  @include border(0, 0.25rem);
+                  background-color: $color-form-inputs;
+                  transform: translate(0, -1.8rem) scale(0.9);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .give-embed-form-wrapper {
+    iframe {
+      scroll-margin-top: 8rem;
+      width: 100%;
+    }
+  }
+}

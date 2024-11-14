@@ -1,0 +1,45 @@
+.spacer {
+  &__na {
+    margin-bottom: 0;
+  }
+
+  &__sm {
+    margin-bottom: 3.75rem;
+  }
+
+  &__md {
+    margin-bottom: 8rem;
+  }
+
+  &__lg {
+    margin-bottom: 10rem;
+  }
+
+  @include respond(tab-port) {
+    &__sm {
+      margin-bottom: 2rem;
+    }
+
+    &__md {
+      margin-bottom: 6rem;
+    }
+
+    &__lg {
+      margin-bottom: 8rem;
+    }
+  }
+
+  @include respond(phone) {
+    &__sm {
+      margin-bottom: 1rem;
+    }
+
+    &__md {
+      margin-bottom: 4rem;
+    }
+
+    &__lg {
+      margin-bottom: 6rem;
+    }
+  }
+}

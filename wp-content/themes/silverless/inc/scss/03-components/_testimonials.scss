@@ -1,0 +1,78 @@
+.testimonials {
+  position: relative;
+
+  .navigation {
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+
+  &__wrapper {
+    @include shadow($color-black);
+    @include border(1px solid $color-tertiary);
+    background-color: $color-white;
+    padding: 3.75rem 1rem;
+    position: relative;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      height: 100%;
+      max-width: 10rem;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+    }
+  }
+
+  &__testimonial {
+    margin-bottom: 1rem;
+  }
+
+  &__stars {
+    &__outside {
+      height: auto;
+      left: -8.5rem;
+      position: absolute;
+      top: -7rem;
+      transform: rotate(160deg);
+      width: 11.5rem;
+    }
+
+    &__inside {
+      height: auto;
+      position: absolute;
+      right: 0.25rem;
+      top: 0.25rem;
+      width: 10rem;
+    }
+  }
+
+  @include respond(tab-port) {
+    .col-span__7 {
+      grid-row: 1;
+    }
+
+    .testimonials {
+      &__image {
+        padding-right: 1rem;
+      }
+
+      &__stars {
+        &__inside {
+          bottom: 2.75rem;
+          left: 1rem;
+          right: unset;
+          top: unset;
+        }
+
+        &__outside {
+          display: none;
+        }
+      }
+    }
+  }
+}

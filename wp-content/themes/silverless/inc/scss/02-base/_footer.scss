@@ -1,0 +1,243 @@
+footer {
+  padding: 3.75rem 0 1rem;
+  position: relative;
+
+  &.container {
+    row-gap: 0;
+
+    & > .row {
+      @include shadow($color-black);
+      @include border;
+    }
+  }
+
+  .footer {
+    &__main {
+      background-color: $color-footer;
+      padding: 2.5rem 2rem 18rem;
+      position: relative;
+      @include respond(phone) {
+        padding-bottom: 3rem;
+      }
+      & > .grid {
+        align-items: flex-start;
+        position: relative;
+      }
+
+      .heading {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &__image {
+      inset: 0;
+      position: absolute;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+        object-position: 60%;
+        width: 100%;
+      }
+
+      &::after {
+        // sass-lint:disable-block no-color-literals
+        background: linear-gradient(180deg, rgba($color-primary, 1) 0%, rgba($color-white, 0) 50%);
+        content: "";
+        inset: 0;
+        position: absolute;
+      }
+    }
+
+    &__dark {
+      background-color: $color-footer-dark;
+      padding: 1.5rem 2rem;
+    }
+  }
+
+  .logo {
+    a {
+      display: block;
+
+      img {
+        height: 100%;
+        max-width: 10rem;
+        object-fit: contain;
+        width: 100%;
+      }
+    }
+
+    svg {
+      fill: $color-white;
+      height: auto;
+      max-width: 12rem;
+      width: 100%;
+    }
+  }
+
+  .nav {
+    li {
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+
+    @include respond(phone) {
+      padding: 0 2rem;
+    }
+
+    * + * {
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    a,
+    p {
+      position: relative;
+    }
+
+    i {
+      left: -1.5rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @include respond(tab-port) {
+        left: -1rem;
+      }
+
+      @include respond(phone) {
+        display: block;
+        margin-right: 0.5rem;
+        position: static;
+        transform: none;
+      }
+    }
+  }
+
+  .contact-form {
+    border-left: 1px solid $color-white;
+    color: $color-white;
+    padding-left: 1rem;
+
+    input {
+      &[type="email"] {
+        font-family: inherit;
+        padding: 0.5rem;
+        width: 100%;
+      }
+    }
+
+    .mc4wp-form-fields {
+      & > .body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .button {
+        border-color: $color-primary;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .sponsors {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+
+    @include respond(phone) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+
+  .socials {
+    align-items: center;
+    column-gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    @include respond(phone) {
+      justify-content: center;
+    }
+  }
+
+  .copyright {
+    align-items: center;
+    display: flex;
+  }
+
+  .silverless {
+    .silverless-logo {
+      height: auto;
+      max-width: 6rem;
+      width: 100%;
+    }
+
+    .silverless {
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
+
+      path {
+        fill: $color-white;
+      }
+    }
+
+    .created {
+      // sass-lint:disable-block indentation
+      opacity: 0;
+      transform: translateY(50px);
+      transition:
+        0.3s transform ease,
+        0.6s opacity ease;
+
+      path {
+        fill: $color-white;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .created {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  @include respond(tab-port) {
+    .logo,
+    .contact-details,
+    .silverless,
+    .copyright,
+    .nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .copyright {
+      .sep {
+        display: none;
+      }
+    }
+  }
+}
+
+.footer-mis-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}

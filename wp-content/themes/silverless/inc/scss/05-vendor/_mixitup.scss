@@ -1,0 +1,30 @@
+.mixitup-page-list {
+  column-gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2rem;
+
+  &.mixitup-page-list-disabled {
+    display: none;
+  }
+
+  .mixitup-control-disabled {
+    display: none;
+  }
+
+  .mixitup-control {
+    @include shadow($color-black);
+    @include border(1px solid $color-tertiary);
+    background-color: $color-white;
+    color: $color-primary;
+    font-family: $font-primary;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    padding: 0.5rem;
+
+    &.mixitup-control-active {
+      color: $color-secondary;
+    }
+  }
+}

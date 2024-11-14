@@ -1,0 +1,565 @@
+// sass-lint:disable no-url-domains, no-url-protocols, indentation
+
+@import "01-abstracts/variables";
+@import "01-abstracts/mixins";
+
+@import url("https://p.typekit.net/p.css?s=1&k=qpv8jkv&ht=tk&f=16353.37461.37466.42261.42262.42263.42264.42265.42266.42267.42268.42269&a=15461136&app=typekit&e=css");
+@font-face {
+  font-display: auto;
+  font-family: "montserrat";
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("https://use.typekit.net/af/32b0e4/00000000000000007735a185/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/32b0e4/00000000000000007735a185/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/32b0e4/00000000000000007735a185/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("opentype");
+}
+
+@font-face {
+  font-display: auto;
+  font-family: "montserrat";
+  font-stretch: normal;
+  font-style: italic;
+  font-weight: 400;
+  src:
+    url("https://use.typekit.net/af/ca31c7/00000000000000007735a18d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/ca31c7/00000000000000007735a18d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/ca31c7/00000000000000007735a18d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
+      format("opentype");
+}
+
+@font-face {
+  font-display: auto;
+  font-family: "montserrat";
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url("https://use.typekit.net/af/73dbad/00000000000000007735a197/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/73dbad/00000000000000007735a197/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/73dbad/00000000000000007735a197/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+      format("opentype");
+}
+
+@font-face {
+  font-display: auto;
+  font-family: "victorian-orchid";
+  font-stretch: normal;
+  font-style: italic;
+  font-weight: 300;
+  src:
+    url("https://use.typekit.net/af/9f62ab/00000000000000007735b5d9/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i3&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/9f62ab/00000000000000007735b5d9/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i3&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/9f62ab/00000000000000007735b5d9/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i3&v=3")
+      format("opentype");
+}
+
+@font-face {
+  font-display: auto;
+  font-family: "victorian-orchid";
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("https://use.typekit.net/af/d4661f/00000000000000007735b5dc/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/d4661f/00000000000000007735b5dc/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/d4661f/00000000000000007735b5dc/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3")
+      format("opentype");
+}
+
+@font-face {
+  font-display: auto;
+  font-family: "victorian-orchid";
+  font-stretch: normal;
+  font-style: italic;
+  font-weight: 400;
+  src:
+    url("https://use.typekit.net/af/23760c/00000000000000007735b5df/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i4&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/23760c/00000000000000007735b5df/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i4&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/23760c/00000000000000007735b5df/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i4&v=3")
+      format("opentype");
+}
+
+@font-face {
+  font-display: auto;
+  font-family: "victorian-orchid";
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url("https://use.typekit.net/af/133a6b/00000000000000007735b5e2/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n5&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/133a6b/00000000000000007735b5e2/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n5&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/133a6b/00000000000000007735b5e2/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n5&v=3")
+      format("opentype");
+}
+
+@font-face {
+  font-display: auto;
+  font-family: "victorian-orchid";
+  font-stretch: normal;
+  font-style: italic;
+  font-weight: 500;
+  src:
+    url("https://use.typekit.net/af/db8715/00000000000000007735b5e6/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i5&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/db8715/00000000000000007735b5e6/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i5&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/db8715/00000000000000007735b5e6/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i5&v=3")
+      format("opentype");
+}
+
+@font-face {
+  font-display: auto;
+  font-family: "victorian-orchid";
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 600;
+  src:
+    url("https://use.typekit.net/af/4588ae/00000000000000007735b5e9/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n6&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/4588ae/00000000000000007735b5e9/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n6&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/4588ae/00000000000000007735b5e9/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n6&v=3")
+      format("opentype");
+}
+
+@font-face {
+  font-display: auto;
+  font-family: "victorian-orchid";
+  font-stretch: normal;
+  font-style: italic;
+  font-weight: 600;
+  src:
+    url("https://use.typekit.net/af/a4887d/00000000000000007735b5ed/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i6&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/a4887d/00000000000000007735b5ed/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i6&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/a4887d/00000000000000007735b5ed/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i6&v=3")
+      format("opentype");
+}
+
+@font-face {
+  font-display: auto;
+  font-family: "victorian-orchid";
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url("https://use.typekit.net/af/7bb23a/00000000000000007735b5f2/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n7&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/7bb23a/00000000000000007735b5f2/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n7&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/7bb23a/00000000000000007735b5f2/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n7&v=3")
+      format("opentype");
+}
+
+@font-face {
+  font-display: auto;
+  font-family: "victorian-orchid";
+  font-stretch: normal;
+  font-style: italic;
+  font-weight: 700;
+  src:
+    url("https://use.typekit.net/af/874c57/00000000000000007735b5f8/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i7&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/874c57/00000000000000007735b5f8/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i7&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/874c57/00000000000000007735b5f8/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i7&v=3")
+      format("opentype");
+}
+
+.tk-montserrat {
+  font-family: "montserrat", sans-serif;
+}
+
+.tk-victorian-orchid {
+  font-family: "victorian-orchid", serif;
+}
+
+.give-form-templates {
+  // sass-lint:disable-block no-important
+  margin: 0;
+
+  .give-form-wrap,
+  .give-receipt-wrap {
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    max-width: unset;
+    @include respond(phone) {
+      padding-top: 4rem;
+    }
+    .give-form-navigator {
+      background-color: transparent;
+
+      .back-btn {
+        align-items: center;
+        border: 2px solid $color-grey;
+        border-radius: 0.5rem;
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        @include respond(phone) {
+          top: -4rem;
+        }
+        i {
+          font-size: 1rem;
+        }
+
+        &::after {
+          content: "Back";
+          font-size: 1rem;
+          line-height: 1;
+          padding-left: 0.5rem;
+        }
+      }
+
+      .title {
+        color: $color-primary;
+        font-family: $font-secondary;
+        font-size: 2.1875rem;
+        font-weight: 600;
+        letter-spacing: 0;
+        line-height: 2.625rem;
+        margin: 0;
+        max-width: unset;
+        text-align: center;
+
+        @include respond(phone) {
+          font-size: 1.9rem;
+          line-height: 2.2rem;
+        }
+      }
+    }
+
+    .give-section {
+      row-gap: 1rem;
+
+      &.introduction {
+        .headline {
+          color: $color-primary;
+          font-family: $font-secondary;
+          font-size: 2.1875rem;
+          font-weight: 600;
+          letter-spacing: 0;
+          line-height: 2.625rem;
+          margin: 0;
+          max-width: unset;
+          text-align: left;
+
+          @include respond(phone) {
+            font-size: 1.9rem;
+            line-height: 2.2rem;
+          }
+        }
+
+        .seperator {
+          display: none;
+        }
+
+        .description {
+          color: $font-color;
+          font-family: $font-primary;
+          font-size: $default-font-size;
+          font-weight: 400;
+          line-height: 1.5;
+          margin: 0;
+          text-align: left;
+        }
+
+        .income-stats {
+          background-color: transparent;
+
+          & > div {
+            &:first-of-type {
+              border-right-color: $color-tertiary;
+            }
+
+            &:last-of-type {
+              border-left-color: $color-tertiary;
+            }
+          }
+
+          .number,
+          .text {
+            color: $color-primary;
+            font-family: $font-secondary;
+            font-size: 1.1875rem;
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 1.625rem;
+          }
+          .goal {
+            display: none;
+          }
+        }
+
+        .progress-bar {
+          .give-progress-bar {
+            @include border(2px solid $color-primary);
+            background-color: $color-primary;
+            box-shadow: none;
+            box-sizing: border-box;
+            height: 1rem;
+            margin: 0;
+
+            span {
+              background: $color-tertiary !important;
+              border-radius: 0;
+            }
+          }
+        }
+      }
+
+      &.choose-amount {
+        .content {
+          color: $font-color;
+          font-family: $font-primary;
+          font-size: $default-font-size;
+          font-weight: 400;
+          line-height: 1.5;
+          margin: 1rem 0 0;
+          text-align: left;
+        }
+
+        .give-donation-levels-wrap {
+          gap: 1rem;
+          margin: 0 !important;
+
+          .give-donation-level-btn {
+            align-items: center;
+            background-color: transparent !important;
+            border: 2px solid $color-primary !important;
+            color: $color-primary !important;
+            display: flex !important;
+            font-size: 1.25rem;
+            gap: 0.5rem;
+            height: 100%;
+            justify-content: center;
+            margin: 0;
+            padding: 2rem;
+            transition: all ease 0.3s;
+            width: 100%;
+
+            .currency {
+              margin: 0;
+            }
+
+            &:hover,
+            &:focus,
+            &.give-default-level {
+              background-color: $color-tertiary !important;
+              border: 2px solid $color-tertiary !important;
+              box-shadow: none;
+              color: $color-white !important;
+              filter: none;
+              outline: none;
+            }
+          }
+        }
+
+        .give-total-wrap {
+          .give-donation-amount {
+            &:focus-within {
+              border-color: $color-primary !important;
+            }
+          }
+        }
+      }
+
+      &.payment {
+        .heading {
+          color: $color-primary;
+          font-family: $font-secondary;
+          font-size: 1.375rem;
+          font-style: normal;
+          font-weight: 500;
+          letter-spacing: 0.025em;
+          line-height: 1.625rem;
+        }
+
+        .subheading {
+          color: $font-color;
+          font-family: $font-primary;
+          font-size: $default-font-size;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 1.5;
+        }
+
+        .form-row {
+          .give-input {
+            color: $font-color;
+            font-family: $font-primary;
+            font-size: $default-font-size;
+            font-weight: 400;
+            line-height: 1.5;
+
+            &:focus {
+              border-color: $color-primary !important;
+            }
+          }
+        }
+
+        .give-donation-summary-section {
+          .back-btn {
+            color: $color-secondary;
+          }
+
+          svg {
+            path {
+              fill: $color-secondary;
+            }
+          }
+
+          .give-donation-summary-table-wrapper {
+            background-color: transparent;
+
+            tr {
+              border-color: $color-primary;
+
+              td,
+              th {
+                color: $font-color;
+
+                &:first-child {
+                  color: $color-primary;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.receipt {
+        .headline {
+          color: $color-primary;
+          font-family: $font-secondary;
+          font-size: 2.1875rem;
+          font-weight: 600;
+          letter-spacing: 0;
+          line-height: 2.625rem;
+          margin: 0;
+          max-width: unset;
+          text-align: center;
+
+          @include respond(phone) {
+            font-size: 1.9rem;
+            line-height: 2.2rem;
+          }
+        }
+
+        .message {
+          color: $font-color;
+          font-family: $font-primary;
+          font-size: $default-font-size;
+          font-weight: 400;
+          line-height: 1.5;
+          margin: 1rem 0 0;
+          text-align: left;
+        }
+
+        .details {
+          margin: 0;
+
+          .headline {
+            font-size: 1.375rem;
+            line-height: 1.625rem;
+            text-align: left;
+          }
+
+          .details-row {
+            &.total {
+              background: transparent;
+              border-top: 1px solid $color-tertiary;
+            }
+
+            i,
+            .detail {
+              color: $color-primary;
+              font-size: $default-font-size;
+              font-weight: 600;
+              line-height: 1.5;
+            }
+
+            .detail {
+              font-family: $font-primary;
+            }
+
+            .value {
+              color: $font-color;
+              font-family: $font-primary;
+              font-size: $default-font-size;
+              font-weight: 400;
+              line-height: 1.5;
+            }
+          }
+        }
+      }
+
+      .give-btn {
+        &.advance-btn,
+        &.give-submit {
+          background: $color-secondary !important;
+          border: 1px solid $color-secondary !important;
+          border-radius: 0.5rem;
+          box-sizing: border-box;
+          color: $color-white;
+          display: inline-block;
+          font-family: $font-primary;
+          font-size: 0.75rem;
+          line-height: 1rem;
+          margin: 1rem auto;
+          min-width: unset;
+          padding: 0.5rem 1.75rem !important;
+          position: relative;
+          text-decoration: none;
+          text-transform: uppercase;
+          transition: all 0.3s ease-in-out;
+          width: max-content;
+
+          &:hover {
+            filter: brightness(0.9);
+          }
+        }
+      }
+    }
+
+    .form-footer {
+      margin-top: 1rem;
+
+      .navigator-tracker {
+        .step-tracker {
+          background-color: $color-primary;
+
+          &.current {
+            background-color: $color-secondary;
+          }
+        }
+      }
+
+      .secure-notice {
+        background-color: transparent;
+        border-top: 1px solid $color-primary;
+        color: $color-primary;
+      }
+    }
+  }
+}

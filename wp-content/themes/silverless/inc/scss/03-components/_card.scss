@@ -1,0 +1,320 @@
+.card {
+  position: relative;
+
+  &__vertical {
+    &.grid {
+      grid-template-rows: max-content;
+      row-gap: 1rem;
+    }
+
+    .card {
+      &__content {
+        align-items: flex-start;
+        flex-grow: 1;
+        gap: 1.5rem;
+        grid-column: span 1;
+        grid-row: 2;
+        justify-content: space-between;
+        position: relative;
+        z-index: 2;
+
+        &__info {
+          align-items: flex-start;
+          color: $color-grey;
+          text-align: left;
+
+          .heading__underline {
+            margin-bottom: 0;
+
+            &::after {
+              padding-top: 0.5rem;
+            }
+          }
+        }
+
+        &__padding {
+          &__na {
+            padding: 0;
+          }
+
+          &__sm {
+            padding: 0 0.5rem;
+          }
+
+          &__md {
+            padding: 0 1rem;
+          }
+
+          &__lg {
+            padding: 0 2rem;
+          }
+        }
+      }
+    }
+
+    &__tall {
+      &.grid {
+        grid-template-rows: 1fr 1fr;
+
+        .card__content {
+          grid-row: 2;
+        }
+      }
+    }
+
+    &.card__image__badge,
+    &.card__image__none {
+      .card__content {
+        align-items: center;
+
+        &__info {
+          align-items: center;
+          color: $color-tertiary;
+          text-align: center;
+
+          .heading {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+
+    &.card__image__badge {
+      @include respond(phone) {
+        .card__image {
+          aspect-ratio: unset;
+
+          img {
+            margin: 0 auto;
+            width: 10rem;
+          }
+        }
+      }
+    }
+
+    &.card__image__none {
+      .card__image {
+        aspect-ratio: unset;
+        display: flex;
+        justify-content: flex-start;
+
+        img {
+          aspect-ratio: 1;
+          max-width: 8rem;
+          object-position: left bottom;
+
+          @include respond(phone) {
+            margin: unset;
+            width: auto;
+          }
+        }
+      }
+
+      .card__content {
+        align-items: flex-start;
+        text-align: left;
+
+        &__info {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  &__horizontal {
+    .card {
+      &__image {
+        aspect-ratio: unset;
+
+        img {
+          inset: 0;
+          overflow: clip;
+          position: absolute;
+        }
+      }
+
+      &__content {
+        &__padding {
+          &__na {
+            padding: 0;
+          }
+
+          &__sm {
+            padding: 1rem 0 2rem;
+          }
+
+          &__md {
+            padding: 2rem;
+          }
+
+          &__lg {
+            padding: 4.75rem 0 5.75rem;
+          }
+        }
+
+        @include respond(tab-port) {
+          padding: 0 0 2rem;
+        }
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: flex-start;
+    position: relative;
+
+    &__info {
+      p,
+      h3 {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  &__image {
+    aspect-ratio: 9 / 7;
+    position: relative;
+
+    img {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+
+    &__sticky {
+      &.card__image {
+        img {
+          @include shadow($color-black);
+          @include border;
+          height: auto;
+          position: sticky;
+          top: 20vh;
+        }
+      }
+    }
+
+    &__cover {
+      img {
+        object-fit: cover;
+      }
+    }
+
+    &__contain {
+      aspect-ratio: 1;
+      padding: 1rem;
+
+      img {
+        object-fit: contain;
+      }
+    }
+
+    &__none {
+      .card {
+        &__image {
+          height: auto;
+        }
+
+        &__content {
+          &__info {
+            align-items: center;
+            color: $color-tertiary;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    &__default {
+      .card__image {
+        &:not(.card__image__sticky) {
+          @include shadow($color-black);
+          @include border;
+          background-color: $color-white;
+
+          @include respond(tab-port) {
+            img {
+              position: relative;
+            }
+          }
+        }
+      }
+    }
+
+    &__background {
+      @include shadow($color-black);
+      @include border;
+
+      &.grid {
+        row-gap: 0;
+      }
+
+      .card {
+        &__image {
+          aspect-ratio: unset;
+          inset: 0;
+          position: absolute;
+
+          img {
+            height: 100%;
+          }
+
+          &::after {
+            // sass-lint:disable-block no-color-literals
+            background: linear-gradient(
+              0deg,
+              rgba($color-primary, 1) 30%,
+              rgba($color-primary, 0) 50%
+            );
+            content: ' ';
+            inset: 0;
+            position: absolute;
+          }
+        }
+
+        &__content {
+          padding: 3.125rem 2.5rem;
+
+          &__info {
+            color: $color-white;
+            gap: 1rem;
+            text-align: left;
+          }
+
+          .heading {
+            color: $color-white;
+
+            &__underline {
+              &::after {
+                border-color: $color-white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include respond(phone) {
+  .section-cards {
+    .additional-artwork-container {
+      .additional-artwork {
+        bottom: unset;
+        grid-row: 2 / 3;
+        left: unset;
+        margin: 0 auto;
+        position: relative;
+        right: unset;
+        top: unset;
+        transform: none;
+        width: 5rem;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

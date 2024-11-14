@@ -1,0 +1,46 @@
+.section-countdown {
+  .countdown {
+    @include shadow($color-black);
+    @include border(1px solid $color-tertiary);
+    background-color: $color-white;
+    padding: 3.75rem 2rem;
+    position: relative;
+
+    &__display {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(3, 1fr);
+      padding-right: 2rem;
+      position: relative;
+
+      &__card {
+        @include border(0);
+        background-color: $color-tertiary;
+        color: $color-white;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: center;
+        padding: 1rem;
+        text-align: center;
+      }
+    }
+
+    &__stars {
+      &__inside {
+        height: auto;
+        position: absolute;
+        right: 0.25rem;
+        top: 0.25rem;
+        width: 10rem;
+      }
+    }
+
+    @include respond(phone) {
+      &__display {
+        grid-template-columns: 1fr;
+        padding-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.section-progress-bar {
+  .progress {
+    &__bar {
+      @include border(2px solid $color-primary);
+      background-color: $color-primary;
+      height: 1rem;
+      position: relative;
+      width: 100%;
+
+      &::after {
+        background-color: $color-tertiary;
+        bottom: 0;
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        width: var(--progress);
+      }
+    }
+
+    &__bar-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &__labels {
+      position: relative;
+
+      div {
+        left: var(--progress);
+        position: absolute;
+        transform: translateX(-50%);
+      }
+    }
+
+    @include respond(phone) {
+      column-gap: 1rem;
+      display: grid;
+      grid-template-columns: 6rem auto;
+
+      .progress {
+        &__heading {
+          grid-column: 2;
+          grid-row: 1;
+        }
+
+        &__footer {
+          grid-column: 2;
+          grid-row: 2;
+        }
+
+        &__bar-container {
+          flex-direction: row;
+          grid-column: 1;
+          grid-row: 1 / span 2;
+        }
+
+        &__bar {
+          height: 100%;
+          width: 1rem;
+
+          &::after {
+            bottom: 0;
+            height: var(--progress);
+            top: unset;
+            width: 100%;
+          }
+        }
+
+        &__labels {
+          margin-top: 1rem;
+
+          div {
+            bottom: var(--progress);
+            left: 0;
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+  }
+}

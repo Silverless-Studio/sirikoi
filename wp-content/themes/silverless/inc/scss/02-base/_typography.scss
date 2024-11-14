@@ -1,0 +1,196 @@
+body {
+  color: $font-color;
+  font-family: $font-primary;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.paragraph,
+p,
+ul {
+  font-size: $default-font-size;
+  font-weight: 400;
+  line-height: 1.5;
+
+  &:not(:last-child) {
+    margin-bottom: $paragraph-spacing;
+  }
+
+  &.small {
+    font-size: $default-font-size * 0.8;
+  }
+}
+
+.tabbed-content,
+.section-leading-text,
+.section-text-block {
+  strong {
+    color: $color-tertiary;
+  }
+
+  ul {
+    list-style: disc;
+    list-style-position: outside;
+    padding-left: 1rem;
+
+    li {
+      margin-bottom: 0.5rem;
+
+      &::marker {
+        color: $color-secondary;
+      }
+    }
+  }
+
+  a {
+    color: $color-secondary;
+    display: inline-block;
+    font-weight: 600;
+    position: relative;
+    white-space: pre-wrap;
+
+    &::after {
+      background-color: $color-secondary;
+      content: "";
+      height: 2px;
+      left: 0;
+      position: absolute;
+      top: calc(100% - 0.25rem);
+      transform: scaleX(0);
+      transition: 0.3s all ease;
+      width: 100%;
+    }
+
+    &:hover {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+.heading {
+  font-family: $font-secondary;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+
+  &.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__xxl {
+    @include heading-animate-slow;
+    font-size: 4.1875rem;
+    line-height: 5rem;
+
+    @include respond(phone) {
+      font-size: 2.5rem;
+      line-height: 2.8rem;
+    }
+  }
+
+  &__xl {
+    @include heading-animate;
+    font-size: 2.1875rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 2.625rem;
+    @include respond(phone) {
+      font-size: 1.9rem;
+      line-height: 2.2rem;
+    }
+  }
+
+  &__lg {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+
+  &__md {
+    font-size: 1.1875rem;
+    line-height: 1.625rem;
+  }
+
+  &__sm {
+    font-family: $font-primary;
+    font-size: 0.75rem;
+    line-height: 1rem;
+
+    &__alt {
+      font-style: italic;
+      line-height: 1.375rem;
+    }
+  }
+
+  &__underline {
+    margin-bottom: 1rem;
+
+    &::after {
+      border-bottom: 1px solid $color-tertiary;
+      content: "";
+      display: block;
+      padding-top: 1rem;
+      width: 2rem;
+    }
+  }
+
+  p,
+  .paragraph,
+  ul {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+  }
+}
+
+.font {
+  &__color {
+    &__primary {
+      color: $color-primary;
+    }
+
+    &__secondary {
+      color: $color-secondary;
+    }
+
+    &__tertiary {
+      color: $color-tertiary;
+    }
+
+    &__white {
+      color: $color-white;
+    }
+
+    &__grey {
+      color: $color-grey;
+    }
+  }
+
+  &__transform {
+    &__uppercase {
+      text-transform: uppercase;
+    }
+  }
+
+  &__style {
+    &__normal {
+      font-style: normal;
+    }
+
+    &__italic {
+      font-style: italic;
+    }
+  }
+
+  &__weight {
+    &__light {
+      font-weight: 300;
+    }
+
+    &__regular {
+      font-weight: 400;
+    }
+  }
+}

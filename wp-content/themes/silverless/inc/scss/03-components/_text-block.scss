@@ -1,0 +1,44 @@
+.section-text-block {
+  .heading {
+    margin-bottom: 2rem;
+    text-align: var(--title-align);
+  }
+
+  .columns {
+    &__1 {
+      columns: 1;
+
+      @include respond(phone) {
+        grid-column: 1 / -1;
+      }
+    }
+
+    &__2 {
+      columns: 2;
+
+      @include respond(phone) {
+        columns: 1;
+      }
+    }
+
+    &__3 {
+      columns: 3;
+
+      @include respond(phone) {
+        columns: 1;
+      }
+    }
+  }
+
+  .body {
+    grid-column: var(--grid-col) / calc(var(--grid-col) * -1);
+  }
+
+  &.sidebar__content {
+    .grid {
+      &.grid__12 {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

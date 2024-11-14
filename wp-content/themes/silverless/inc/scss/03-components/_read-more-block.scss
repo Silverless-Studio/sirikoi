@@ -1,0 +1,11 @@
+.read-more-block {
+  .read-more-content {
+    display: none;
+
+    p {
+      &:last-child {
+        margin-bottom: $paragraph-spacing;
+      }
+    }
+  }
+}

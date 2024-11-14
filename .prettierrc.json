@@ -1,0 +1,22 @@
+{
+  "trailingComma": "none",
+  "tabWidth": 2,
+  "singleQuote": true,
+  "endOfLine": "lf",
+  "overrides": [
+    {
+      "files": "*.js",
+      "options": {
+        "semi": true
+      }
+    },
+    {
+      "files": ["*.scss"],
+      "options": {
+        "plugins": ["prettier-plugin-css-order"],
+        "cssDeclarationSorterOrder": "alphabetical",
+        "cssDeclarationSorterKeepOverrides": false
+      }
+    }
+  ]
+}

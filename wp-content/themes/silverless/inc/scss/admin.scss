@@ -1,0 +1,147 @@
+@import '01-abstracts/variables';
+
+@import '03-components/background-color';
+
+.acf-field-gallery {
+  &.tessellated-gallery {
+    .acf-gallery-attachments {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(6, 1fr);
+
+      .acf-gallery-attachment {
+        width: 100%;
+
+        &:nth-child(8n - 7),
+        &:nth-child(8n - 5),
+        &:nth-child(8n - 2),
+        &:nth-child(8n - 1),
+        &:nth-child(8n) {
+          grid-column: span 2;
+        }
+
+        &:nth-child(8n - 6) {
+          grid-column: span 4;
+          grid-row: span 2;
+        }
+
+        &:nth-child(8n - 4),
+        &:nth-child(8n - 3) {
+          grid-column: span 3;
+        }
+
+        img {
+          height: 100%;
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.acf-field-select {
+  &.colour-select {
+    select {
+      [value='primary'] {
+        background-color: $color-primary;
+        color: $color-white;
+      }
+
+      [value='secondary'] {
+        background-color: $color-secondary;
+        color: $color-white;
+      }
+
+      [value='tertiary'] {
+        background-color: $color-tertiary;
+        color: $color-white;
+      }
+
+      [value='black'] {
+        background-color: $color-black;
+        color: $color-white;
+      }
+
+      [value='grey'] {
+        background-color: $color-grey;
+        color: $color-white;
+      }
+
+      [value='white'] {
+        background-color: $color-white;
+        color: $color-black;
+      }
+
+      [value='supporting_1'] {
+        background-color: $color-supporting-1;
+        color: $color-white;
+      }
+
+      [value='supporting_2'] {
+        background-color: $color-supporting-2;
+        color: $color-black;
+      }
+
+      [value='supporting_3'] {
+        background-color: $color-supporting-3;
+        color: $color-black;
+      }
+    }
+  }
+}
+
+.acf-flexible-content {
+  .layout {
+    background: $color-supporting-2;
+    margin: 0 0 1rem;
+
+    .acf-fc-layout-handle {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      font-size: 14px;
+      text-transform: uppercase;
+
+      .acf-fc-layout-order {
+        background: $color-secondary;
+        color: $color-white;
+        margin-right: 1rem;
+      }
+
+      .acfe-layout-title {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .acf-block-preview {
+        align-items: center;
+        background: $color-supporting-3;
+        border: 1px solid $color-grey;
+        color: $color-primary;
+        display: flex;
+        flex-direction: row;
+        font-size: 0.8rem;
+        text-transform: none;
+
+        > span {
+          display: inline-block;
+          font-weight: 400;
+          padding: 0 3px;
+
+          &:first-of-type {
+            background: $color-grey;
+            color: $color-white;
+          }
+
+          &.acf-block-preview-color {
+            height: 100%;
+            width: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

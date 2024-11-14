@@ -1,0 +1,112 @@
+.section-tabbed-content {
+  .tabbed-content {
+    &__tabs {
+      display: flex;
+      flex-direction: column;
+      position: sticky;
+      row-gap: 1.5rem;
+      scroll-margin-top: 20vh;
+      top: 20vh;
+      @include respond(tab-port) {
+        @include border;
+        border-color: $color-tertiary;
+        row-gap: 0.5rem;
+      }
+      &.expanded {
+        .tabbed-content__tab.active {
+          border-bottom: 1px solid $color-tertiary;
+        }
+      }
+    }
+
+    &__tab {
+      align-items: center;
+      border-bottom: 1px solid $color-tertiary;
+      color: $color-tertiary;
+      column-gap: 1rem;
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: auto 1.5rem;
+      padding-bottom: 1.5rem;
+      @include respond(tab-port) {
+        border: none;
+      }
+      svg {
+        fill: $color-tertiary;
+        transition: all ease 0.3s;
+        @include respond(phone) {
+          display: none;
+        }
+      }
+
+      &.active {
+        color: $color-primary;
+
+        svg {
+          fill: $color-secondary;
+        }
+      }
+    }
+
+    &__content-container {
+      position: relative;
+      scroll-margin-top: 20vh;
+    }
+
+    &__content {
+      display: none;
+      position: relative;
+      z-index: 2;
+
+      &:first-child {
+        display: block;
+      }
+    }
+
+    @include respond(tab-port) {
+      &.grid {
+        & > * {
+          grid-column: 1 / -1;
+        }
+      }
+
+      &__tab {
+        position: relative;
+        display: none;
+        order: 2;
+        padding: 0.5rem 1rem;
+        &:after {
+          content: "";
+          position: absolute;
+          left: calc(100% - 1.5rem);
+          top: calc(50% + -0.35rem);
+          width: 0px;
+          height: 0px;
+          border-style: solid;
+          border-width: 0.75rem 0.5rem 0 0.5rem;
+          border-color: $color-primary transparent transparent transparent;
+          opacity: 0;
+        }
+
+        &.active {
+          padding: 0.5rem 0;
+          margin: 0 1rem;
+          display: block;
+          order: 1;
+          &:after {
+            opacity: 1;
+          }
+        }
+
+        a {
+          border-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+
+      &__content-container {
+        scroll-margin-top: 25vh;
+      }
+    }
+  }
+}

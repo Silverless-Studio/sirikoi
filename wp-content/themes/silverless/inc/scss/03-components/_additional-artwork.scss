@@ -1,0 +1,28 @@
+.additional-artwork {
+  // sass-lint:disable-block indentation
+  bottom: var(--bottom-alignment);
+  left: var(--left-alignment);
+  mix-blend-mode: multiply;
+  position: absolute;
+  right: unset;
+  top: unset;
+  transform: translate(var(--x-translation), var(--y-translation)) scale(var(--scale));
+  transform-origin: bottom left;
+  z-index: -1;
+
+  img {
+    mix-blend-mode: multiply;
+    opacity: var(--opacity);
+    transform: rotate(var(--rotation));
+    transform-origin: center;
+  }
+  &.hide-on-mobile {
+    @include respond(phone) {
+      display: none;
+    }
+  }
+}
+
+.additional-artwork-container {
+  position: relative;
+}

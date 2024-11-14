@@ -1,0 +1,47 @@
+.button {
+  background: $color-secondary;
+  border: 1px solid $color-secondary;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  color: $color-white;
+  display: inline-block;
+  font-family: $font-primary;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding: 0.5rem 1.75rem;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  width: max-content;
+
+  &:hover {
+    background: darken($color-secondary, 20%);
+    border-color: darken($color-secondary, 20%);
+  }
+
+  &:not(.button__no-arrow) {
+    padding: 0.5rem 3.75rem 0.5rem 1.75rem;
+
+    &::after {
+      background: url('/wp-content/themes/silverless/inc/img/arrow-small.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: '';
+      height: 100%;
+      position: absolute;
+      right: 1.75rem;
+      top: 0;
+      width: 1rem;
+    }
+  }
+
+  &__alt {
+    font-family: $font-secondary;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    text-transform: unset;
+  }
+}

@@ -1,0 +1,25 @@
+.section-default-content {
+  &__awards-affiliates {
+    &.container {
+      row-gap: 0;
+    }
+
+    .heading {
+      margin-bottom: 2rem;
+      text-align: var(--title-align);
+    }
+
+    .grid {
+      a {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+      }
+
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == phone-plus {
+    @media only screen and (min-width: calc(37.5em + 1px)) {
+      @content;
+    } //601px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint == tab-port-plus {
+    @media only screen and (min-width: calc(56.25em + 1px)) {
+      @content;
+    } //601px
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breakpoint == tab-land-plus {
+    @media only screen and (min-width: calc(75em + 1px)) {
+      @content;
+    } //1201px
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800
+  }
+  @if $breakpoint == shallow-desktop {
+    @media only screen and (min-width: 75em) and (max-height: 41em) {
+      @content;
+    } //1200 wide and less than 650 high
+  }
+}
+
+@mixin css-var($prop: null, $value: null) {
+  @if ($prop and $value) {
+    #{$prop}: $value;
+  }
+}
+
+@mixin shadow($color, $x: 0.5rem, $y: 0.5rem, $blur: 0.75rem) {
+  // sass-lint:disable-block no-color-literals
+  box-shadow: rgba($color, 0.35) $x $y $blur;
+}
+
+@mixin border($border: 1px solid $color-white, $radius: 0.5rem) {
+  border: $border;
+  border-radius: $radius;
+  overflow: clip;
+}
+
+@mixin heading-animate-slow {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition:
+    0.5s 0.2s transform ease-out,
+    1s 0.2s opacity ease;
+}
+
+@mixin heading-animate {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition:
+    0.3s transform ease-out,
+    0.5s opacity ease;
+}

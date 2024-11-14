@@ -1,0 +1,356 @@
+.site-header {
+  background: none;
+  left: 0.5rem;
+  padding: 0;
+  padding-top: 0.5rem;
+  position: fixed;
+  right: 0.5rem;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  z-index: 5;
+
+  .grid {
+    align-items: center;
+  }
+
+  @include respond(tab-port) {
+    .grid {
+      row-gap: 2rem;
+    }
+  }
+}
+
+.site-branding {
+  grid-column: 2 / 6;
+  height: $nav-menu-height;
+  justify-content: flex-start;
+
+  @include respond(tab-port) {
+    grid-column: 1 / 6;
+  }
+
+  a {
+    display: block;
+    height: 100%;
+    width: max-content;
+  }
+
+  img {
+    height: 100%;
+    object-fit: contain;
+    object-position: left;
+    padding: 0;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+  }
+}
+
+.mobile-burger {
+  cursor: pointer;
+  display: flex;
+  grid-column: -4 / -1;
+  justify-content: flex-end;
+
+  svg {
+    stroke: $color-secondary;
+  }
+}
+
+.scrolled {
+  .site-header {
+    box-shadow: rgba(0, 0, 0, 0.35) 0 1.5rem 1rem -1.25rem;
+    background-color: $color-supporting-3;
+  }
+}
+
+.offscreen-menu {
+  color: $color-white;
+  height: 100vh;
+  left: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.3s ease-in-out;
+
+  &::before {
+    // sass-lint:disable-block no-color-literals
+    backdrop-filter: blur(0.5rem);
+    background-color: rgba($color-black, 0.3);
+    content: " ";
+    inset: 0;
+    position: absolute;
+  }
+
+  &__content {
+    background-color: $color-primary;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding-left: 6rem;
+    padding-top: 0.5rem;
+    position: absolute;
+    right: -100%;
+    transition: all 0.3s ease-in-out;
+    width: max-content;
+
+    &::before {
+      background-color: $color-primary;
+      bottom: 0;
+      content: " ";
+      display: block;
+      height: 100vh;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100vw;
+
+      @include respond(phone) {
+        left: 0.5rem;
+      }
+    }
+
+    & > * {
+      position: relative;
+    }
+
+    .mobile-menu-open & {
+      right: 0;
+    }
+  }
+
+  .mobile-menu-open & {
+    left: 0;
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: $nav-menu-height;
+    justify-content: space-between;
+  }
+
+  .menu-close {
+    cursor: pointer;
+  }
+
+  .main-navigation {
+    flex-grow: 1;
+  }
+
+  .menu-main-menu-container {
+    column-gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+  }
+
+  .main-navigation-list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+  }
+
+  .menu-item {
+    opacity: 0;
+    position: relative;
+    transform: translateY(-0.5rem);
+
+    &.button {
+      margin-left: 1rem;
+      margin-top: 1rem;
+    }
+
+    &:not(.button) {
+      a {
+        background-color: $color-primary;
+        padding: 1rem 2.5rem 1rem 1rem;
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        transition: all 0.3s #{$i * 0.1s} ease-in;
+      }
+    }
+
+    .mobile-menu-open & {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .sub-menu {
+    border-left: 1px solid $color-secondary;
+    left: calc(100% + 2rem);
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-10%) translateY(-50%) scale(0);
+    transition: all 0.3s ease-in;
+    width: max-content;
+    z-index: 1;
+
+    .menu-item {
+      a {
+        padding: 1rem;
+        padding-right: 0;
+      }
+    }
+
+    &::before {
+      background-color: $color-secondary;
+      content: " ";
+      display: block;
+      height: 1px;
+      left: -100%;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transition: all 0.3s 0.2s ease-in;
+      width: 0;
+    }
+
+    &.show {
+      opacity: 1;
+      transform: translateX(0) translateY(-50%) scale(1);
+
+      &::before {
+        width: calc(100% + 1rem);
+      }
+    }
+  }
+
+  .current-menu-item,
+  .current-page-parent {
+    &:not(.menu-item-type-custom) {
+      & > a {
+        color: $color-secondary;
+      }
+    }
+  }
+
+  .menu-item-has-children {
+    & > a {
+      &::after {
+        background: url("/wp-content/themes/silverless/inc/img/chevron.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: "";
+        height: 100%;
+        position: absolute;
+        right: 1rem;
+        top: 0;
+        width: 0.5rem;
+      }
+    }
+  }
+
+  @include respond(tab-port) {
+    .offscreen-menu {
+      &__content {
+        padding-left: 2rem;
+      }
+    }
+  }
+
+  @include respond(phone) {
+    .offscreen-menu {
+      &__content {
+        width: 0;
+
+        .mobile-menu-open & {
+          width: calc(100vw - 1rem);
+        }
+      }
+    }
+
+    .menu-main-menu-container {
+      grid-template-columns: 1fr;
+    }
+
+    .menu-item {
+      position: unset;
+    }
+
+    .sub-menu {
+      bottom: 0;
+      left: 100%;
+      opacity: 1;
+      position: absolute;
+      top: 0;
+
+      a {
+        // FOR DEV
+        color: $color-error;
+      }
+
+      &.show {
+        display: none;
+      }
+
+      &::before {
+        content: none;
+      }
+    }
+  }
+}
+
+.offcanvas-menu {
+  &--pre,
+  &--pre-prep,
+  &--contact,
+  &--about {
+    background: $color-primary;
+    display: none;
+    flex-direction: column;
+    height: 100vh;
+    inset: 0;
+    justify-content: center;
+    padding-top: 0.5rem;
+    position: absolute;
+    transform: translateX(100vw);
+    transition: all 0.3s ease-in;
+
+    .menu-item {
+      &:not(.button) {
+        a {
+          background-color: transparent;
+        }
+      }
+    }
+
+    .menu-close-sub {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      height: $nav-menu-height;
+      justify-content: flex-start;
+
+      svg {
+        cursor: pointer;
+        transform: rotate(180deg);
+      }
+    }
+
+    .menu-items-sub {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: center;
+      margin-top: -5rem;
+    }
+
+    &.active {
+      transform: translateX(0);
+    }
+
+    @include respond(phone) {
+      display: flex;
+    }
+  }
+}

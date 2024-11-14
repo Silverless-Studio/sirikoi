@@ -1,0 +1,21 @@
+.svg {
+  &__arrow {
+    fill: $color-secondary;
+
+    &__small {
+      fill: $color-white;
+    }
+  }
+
+  &__burger {
+    fill: $color-secondary;
+  }
+
+  &__chevron {
+    fill: $color-white;
+  }
+
+  &__cross {
+    fill: $color-secondary;
+  }
+}

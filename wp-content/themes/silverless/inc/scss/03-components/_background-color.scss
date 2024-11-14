@@ -1,0 +1,62 @@
+.background {
+  // sass-lint:disable-block class-name-format
+  &__color {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    &__primary {
+      background-color: $color-primary;
+    }
+
+    &__secondary {
+      background-color: $color-secondary;
+    }
+
+    &__tertiary {
+      background-color: $color-tertiary;
+    }
+
+    &__black {
+      background-color: $color-black;
+    }
+
+    &__grey {
+      background-color: $color-grey;
+    }
+
+    &__white {
+      background-color: $color-white;
+    }
+
+    &__supporting_1 {
+      background-color: $color-supporting-1;
+    }
+
+    &__supporting_2 {
+      background-color: $color-supporting-2;
+    }
+
+    &__supporting_3 {
+      background-color: $color-supporting-3;
+    }
+
+    &.padding {
+      &__na {
+        padding-top: 0;
+      }
+
+      &__sm {
+        padding-top: 3.75rem;
+      }
+
+      &__md {
+        padding-top: 8rem;
+      }
+
+      &__lg {
+        padding-top: 10rem;
+      }
+    }
+  }
+}

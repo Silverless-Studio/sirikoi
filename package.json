@@ -1,0 +1,34 @@
+{
+  "name": "silverless",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "watch": "gulp watch",
+    "build": "gulp compile",
+    "lint": "gulp lint"
+  },
+  "author": "Silverless",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.55.0",
+    "eslint-plugin-jquery": "^1.5.1",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint-new": "^1.8.4",
+    "gulp-postcss": "^9.0.1",
+    "gulp-replace": "^1.1.4",
+    "gulp-sass": "^5.1.0",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-uglify": "^3.0.2",
+    "postcss": "^8.4.32",
+    "postcss-sort-media-queries": "^5.2.0",
+    "prettier-plugin-css-order": "^2.0.1",
+    "sass": "^1.69.5"
+  },
+  "browserslist": [
+    "last 2 versions, not dead, > 0.2%"
+  ]
+}

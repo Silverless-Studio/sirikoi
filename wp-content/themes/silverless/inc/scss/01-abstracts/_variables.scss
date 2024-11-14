@@ -1,0 +1,38 @@
+$color-primary: #072639;
+$color-secondary: #e31d1d;
+$color-tertiary: #467c9f;
+$color-white: #ffffff;
+$color-black: #000000;
+$color-grey: #707070;
+$color-supporting-1: #00c426;
+$color-supporting-2: #e6e2de;
+$color-supporting-3: #f8f0eb;
+$color-form-inputs: #ded8d3;
+$color-error: $color-secondary;
+
+$font-primary: 'montserrat', sans-serif;
+$font-secondary: 'victorian-orchid', serif;
+
+$gutter-width: 3.75rem;
+$container-margin: 5.9375rem;
+$grid-width: 73.5rem;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 54em; // 800px;
+$bp-small: 37.5em; // 600px;
+
+$page-border-size: 0.5rem;
+$page-border-color: $color-white;
+
+$background-color: $color-supporting-3;
+$font-color: $color-grey;
+
+$color-footer: $color-primary;
+$color-footer-dark: darken($color-primary, 10);
+
+$default-font-size: 1rem;
+$paragraph-spacing: 1.5rem;
+
+$nav-menu-height: 5.3125rem;

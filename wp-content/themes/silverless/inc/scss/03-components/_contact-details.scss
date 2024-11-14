@@ -1,0 +1,23 @@
+.section-contact-details {
+  .contact-details {
+    &__details {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1.5rem;
+
+      * {
+        color: $color-primary;
+        display: block;
+        margin: 0;
+      }
+    }
+
+    &__map {
+      img {
+        height: auto;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+  }
+}
