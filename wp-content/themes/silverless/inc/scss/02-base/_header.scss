@@ -86,7 +86,7 @@
   }
 
   &__content {
-    background-color: $color-primary;
+    background-color: $color-secondary;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -98,7 +98,7 @@
     width: max-content;
 
     &::before {
-      background-color: $color-primary;
+      background-color: $color-secondary;
       bottom: 0;
       content: ' ';
       display: block;
@@ -168,7 +168,7 @@
 
     &:not(.button) {
       a {
-        background-color: $color-primary;
+        // background-color: $color-primary;
         padding: 1rem 2.5rem 1rem 1rem;
         position: relative;
         z-index: 2;
@@ -232,7 +232,7 @@
   .current-page-parent {
     &:not(.menu-item-type-custom) {
       & > a {
-        color: $color-secondary;
+        color: $color-primary;
       }
     }
   }
