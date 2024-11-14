@@ -52,7 +52,7 @@
   box-shadow: rgba($color, 0.35) $x $y $blur;
 }
 
-@mixin border($border: 1px solid $color-white, $radius: 0.5rem) {
+@mixin border($border: none, $radius: 0rem) {
   border: $border;
   border-radius: $radius;
   overflow: clip;

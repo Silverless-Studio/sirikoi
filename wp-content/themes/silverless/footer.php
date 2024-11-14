@@ -131,14 +131,7 @@ $mis_link = get_field('mis_link', 'options');
     </div>
 
 </footer><!-- #colophon -->
-<div class="container">
-    <div class="row footer-mis-link">
-        <a class="button button__alt" href="<?php echo $mis_link['url']; ?>"
-            target="<?php echo $mis_link['target']; ?>">
-            <?php echo $mis_link['title']; ?>
-        </a>
-    </div>
-</div>
+
 
 </div><!-- #page -->
 

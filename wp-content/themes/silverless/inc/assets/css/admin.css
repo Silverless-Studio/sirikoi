@@ -1,1 +1,152 @@
-.background__color{display:flex;flex-direction:column;gap:0}.background__color__primary{background-color:#072639}.background__color__secondary{background-color:#e31d1d}.background__color__tertiary{background-color:#467c9f}.background__color__black{background-color:#000}.background__color__grey{background-color:#707070}.background__color__white{background-color:#fff}.background__color__supporting_1{background-color:#00c426}.background__color__supporting_2{background-color:#e6e2de}.background__color__supporting_3{background-color:#f8f0eb}.background__color.padding__na{padding-top:0}.background__color.padding__sm{padding-top:3.75rem}.background__color.padding__md{padding-top:8rem}.background__color.padding__lg{padding-top:10rem}.acf-field-gallery.tessellated-gallery .acf-gallery-attachments{display:grid;gap:1rem;grid-template-columns:repeat(6,1fr)}.acf-field-gallery.tessellated-gallery .acf-gallery-attachments .acf-gallery-attachment{width:100%}.acf-field-gallery.tessellated-gallery .acf-gallery-attachments .acf-gallery-attachment:nth-child(8n),.acf-field-gallery.tessellated-gallery .acf-gallery-attachments .acf-gallery-attachment:nth-child(8n-1),.acf-field-gallery.tessellated-gallery .acf-gallery-attachments .acf-gallery-attachment:nth-child(8n-2),.acf-field-gallery.tessellated-gallery .acf-gallery-attachments .acf-gallery-attachment:nth-child(8n-5),.acf-field-gallery.tessellated-gallery .acf-gallery-attachments .acf-gallery-attachment:nth-child(8n-7){grid-column:span 2}.acf-field-gallery.tessellated-gallery .acf-gallery-attachments .acf-gallery-attachment:nth-child(8n-6){grid-column:span 4;grid-row:span 2}.acf-field-gallery.tessellated-gallery .acf-gallery-attachments .acf-gallery-attachment:nth-child(8n-3),.acf-field-gallery.tessellated-gallery .acf-gallery-attachments .acf-gallery-attachment:nth-child(8n-4){grid-column:span 3}.acf-field-gallery.tessellated-gallery .acf-gallery-attachments .acf-gallery-attachment img{height:100%;-o-object-fit:cover;object-fit:cover;width:100%}.acf-field-select.colour-select select [value=primary]{background-color:#072639;color:#fff}.acf-field-select.colour-select select [value=secondary]{background-color:#e31d1d;color:#fff}.acf-field-select.colour-select select [value=tertiary]{background-color:#467c9f;color:#fff}.acf-field-select.colour-select select [value=black]{background-color:#000;color:#fff}.acf-field-select.colour-select select [value=grey]{background-color:#707070;color:#fff}.acf-field-select.colour-select select [value=white]{background-color:#fff;color:#000}.acf-field-select.colour-select select [value=supporting_1]{background-color:#00c426;color:#fff}.acf-field-select.colour-select select [value=supporting_2]{background-color:#e6e2de;color:#000}.acf-field-select.colour-select select [value=supporting_3]{background-color:#f8f0eb;color:#000}.acf-flexible-content .layout{background:#e6e2de;margin:0 0 1rem}.acf-flexible-content .layout .acf-fc-layout-handle{align-items:center;display:flex;flex-direction:row;font-size:14px;text-transform:uppercase}.acf-flexible-content .layout .acf-fc-layout-handle .acf-fc-layout-order{background:#e31d1d;color:#fff;margin-right:1rem}.acf-flexible-content .layout .acf-fc-layout-handle .acfe-layout-title{align-items:center;display:flex;flex-wrap:wrap;gap:.5rem}.acf-flexible-content .layout .acf-fc-layout-handle .acf-block-preview{align-items:center;background:#f8f0eb;border:1px solid #707070;color:#072639;display:flex;flex-direction:row;font-size:.8rem;text-transform:none}.acf-flexible-content .layout .acf-fc-layout-handle .acf-block-preview>span{display:inline-block;font-weight:400;padding:0 3px}.acf-flexible-content .layout .acf-fc-layout-handle .acf-block-preview>span:first-of-type{background:#707070;color:#fff}.acf-flexible-content .layout .acf-fc-layout-handle .acf-block-preview>span.acf-block-preview-color{height:100%;width:1rem}
+.background__color {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+.background__color__primary {
+	background-color: #072639;
+}
+.background__color__secondary {
+	background-color: #e31d1d;
+}
+.background__color__tertiary {
+	background-color: #467c9f;
+}
+.background__color__black {
+	background-color: #000000;
+}
+.background__color__grey {
+	background-color: #707070;
+}
+.background__color__white {
+	background-color: #ffffff;
+}
+.background__color__supporting_1 {
+	background-color: #00c426;
+}
+.background__color__supporting_2 {
+	background-color: #e6e2de;
+}
+.background__color__supporting_3 {
+	background-color: #f8f0eb;
+}
+.background__color.padding__na {
+	padding-top: 0;
+}
+.background__color.padding__sm {
+	padding-top: 3.75rem;
+}
+.background__color.padding__md {
+	padding-top: 8rem;
+}
+.background__color.padding__lg {
+	padding-top: 10rem;
+}
+
+.acf-field-gallery.tessellated-gallery .acf-gallery-attachments {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(6, 1fr);
+}
+.acf-field-gallery.tessellated-gallery .acf-gallery-attachments .acf-gallery-attachment {
+	width: 100%;
+}
+.acf-field-gallery.tessellated-gallery .acf-gallery-attachments .acf-gallery-attachment:nth-child(8n-7), .acf-field-gallery.tessellated-gallery .acf-gallery-attachments .acf-gallery-attachment:nth-child(8n-5), .acf-field-gallery.tessellated-gallery .acf-gallery-attachments .acf-gallery-attachment:nth-child(8n-2), .acf-field-gallery.tessellated-gallery .acf-gallery-attachments .acf-gallery-attachment:nth-child(8n-1), .acf-field-gallery.tessellated-gallery .acf-gallery-attachments .acf-gallery-attachment:nth-child(8n) {
+	grid-column: span 2;
+}
+.acf-field-gallery.tessellated-gallery .acf-gallery-attachments .acf-gallery-attachment:nth-child(8n-6) {
+	grid-column: span 4;
+	grid-row: span 2;
+}
+.acf-field-gallery.tessellated-gallery .acf-gallery-attachments .acf-gallery-attachment:nth-child(8n-4), .acf-field-gallery.tessellated-gallery .acf-gallery-attachments .acf-gallery-attachment:nth-child(8n-3) {
+	grid-column: span 3;
+}
+.acf-field-gallery.tessellated-gallery .acf-gallery-attachments .acf-gallery-attachment img {
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	width: 100%;
+}
+
+.acf-field-select.colour-select select [value=primary] {
+	background-color: #072639;
+	color: #ffffff;
+}
+.acf-field-select.colour-select select [value=secondary] {
+	background-color: #e31d1d;
+	color: #ffffff;
+}
+.acf-field-select.colour-select select [value=tertiary] {
+	background-color: #467c9f;
+	color: #ffffff;
+}
+.acf-field-select.colour-select select [value=black] {
+	background-color: #000000;
+	color: #ffffff;
+}
+.acf-field-select.colour-select select [value=grey] {
+	background-color: #707070;
+	color: #ffffff;
+}
+.acf-field-select.colour-select select [value=white] {
+	background-color: #ffffff;
+	color: #000000;
+}
+.acf-field-select.colour-select select [value=supporting_1] {
+	background-color: #00c426;
+	color: #ffffff;
+}
+.acf-field-select.colour-select select [value=supporting_2] {
+	background-color: #e6e2de;
+	color: #000000;
+}
+.acf-field-select.colour-select select [value=supporting_3] {
+	background-color: #f8f0eb;
+	color: #000000;
+}
+
+.acf-flexible-content .layout {
+	background: #e6e2de;
+	margin: 0 0 1rem;
+}
+.acf-flexible-content .layout .acf-fc-layout-handle {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.acf-flexible-content .layout .acf-fc-layout-handle .acf-fc-layout-order {
+	background: #e31d1d;
+	color: #ffffff;
+	margin-right: 1rem;
+}
+.acf-flexible-content .layout .acf-fc-layout-handle .acfe-layout-title {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+.acf-flexible-content .layout .acf-fc-layout-handle .acf-block-preview {
+	align-items: center;
+	background: #f8f0eb;
+	border: 1px solid #707070;
+	color: #072639;
+	display: flex;
+	flex-direction: row;
+	font-size: 0.8rem;
+	text-transform: none;
+}
+.acf-flexible-content .layout .acf-fc-layout-handle .acf-block-preview > span {
+	display: inline-block;
+	font-weight: 400;
+	padding: 0 3px;
+}
+.acf-flexible-content .layout .acf-fc-layout-handle .acf-block-preview > span:first-of-type {
+	background: #707070;
+	color: #ffffff;
+}
+.acf-flexible-content .layout .acf-fc-layout-handle .acf-block-preview > span.acf-block-preview-color {
+	height: 100%;
+	width: 1rem;
+}
