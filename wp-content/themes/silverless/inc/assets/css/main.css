@@ -302,12 +302,11 @@ section {
 }
 
 body {
-	background-color: #ffffff;
-	padding: 0.5rem;
+	background-color: #f0edec;
+	padding: 1.5rem;
 }
 
 .site {
-	background-color: #f8f0eb;
 	overflow: clip;
 	position: relative;
 }
@@ -2343,7 +2342,7 @@ aside {
 	background-color: #e6e2de;
 }
 .background__color__supporting_3 {
-	background-color: #f8f0eb;
+	background-color: #f0edec;
 }
 .background__color.padding__na {
 	padding-top: 0;

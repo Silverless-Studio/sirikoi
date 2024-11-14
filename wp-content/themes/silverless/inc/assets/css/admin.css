@@ -28,7 +28,7 @@
 	background-color: #e6e2de;
 }
 .background__color__supporting_3 {
-	background-color: #f8f0eb;
+	background-color: #f0edec;
 }
 .background__color.padding__na {
 	padding-top: 0;
@@ -101,7 +101,7 @@
 	color: #000000;
 }
 .acf-field-select.colour-select select [value=supporting_3] {
-	background-color: #f8f0eb;
+	background-color: #f0edec;
 	color: #000000;
 }
 
@@ -129,7 +129,7 @@
 }
 .acf-flexible-content .layout .acf-fc-layout-handle .acf-block-preview {
 	align-items: center;
-	background: #f8f0eb;
+	background: #f0edec;
 	border: 1px solid #707070;
 	color: #072639;
 	display: flex;
