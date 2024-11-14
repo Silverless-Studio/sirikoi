@@ -19,14 +19,7 @@ global $video_modals;
 
 <section
     class="container hero hero__<?php echo $hero_size; ?> spacer spacer__<?php echo $space_size; ?> <?php echo $sidebar_content ? "sidebar__content" : ""; ?>">
-
-    <div class="row row__extended hero__<?php echo $hero_type; ?> hero__wrapper">
-
-        <?php get_template_part('template-parts/additional-artwork'); ?>
-
-        <?php if ($hero_type == 'image' || $hero_type == 'video') { ?>
-
-            <div class="hero__background">
+<div class="hero__background">
 
                 <?php
 
@@ -78,6 +71,13 @@ global $video_modals;
                 <?php } ?>
 
             </div>
+    <div class="row hero__<?php echo $hero_type; ?> hero__wrapper">
+            
+        <?php get_template_part('template-parts/additional-artwork'); ?>
+
+        <?php if ($hero_type == 'image' || $hero_type == 'video') { ?>
+
+
 
             <?php if ($enable_overlay) { ?>
 

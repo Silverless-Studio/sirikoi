@@ -1173,6 +1173,7 @@ ul.small {
 }
 .hero__footer {
 	background-color: #b74c2d;
+	border-top: 3px solid #f0edec;
 	display: grid;
 	grid-column: 1/-1;
 	grid-template-rows: 0.75rem 2.5rem;
@@ -1207,6 +1208,12 @@ ul.small {
 .hero__wrapper > *, .hero__slide > * {
 	inset: 0;
 	position: absolute;
+}
+.hero__background {
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
 }
 .hero__background img {
 	height: 100%;

@@ -252,7 +252,7 @@ jQuery(document).ready(function ($) {
   });
 
   /* MENU */
-  $('header').on('click', '.mobile-burger svg', function () {
+  $('header').on('click', '.mobile-burger', function () {
     $('header').addClass('mobile-menu-open');
   });
 
@@ -308,26 +308,30 @@ jQuery(document).ready(function ($) {
   );
 
   /* ACCORDION */
-  $('.section-accordion').on('click', '.accordion__heading:not(.expanded)', function () {
-    var self = this;
-    $(self)
-      .closest('.section-accordion')
-      .find('.expanded')
-      .removeClass('expanded')
-      .next()
-      .slideUp(500);
-    $(self).toggleClass('expanded');
-    $(self)
-      .next()
-      .slideToggle(500, function () {
-        $('html,body').animate(
-          {
-            scrollTop: $(self).offset().top - 130
-          },
-          500
-        );
-      });
-  });
+  $('.section-accordion').on(
+    'click',
+    '.accordion__heading:not(.expanded)',
+    function () {
+      var self = this;
+      $(self)
+        .closest('.section-accordion')
+        .find('.expanded')
+        .removeClass('expanded')
+        .next()
+        .slideUp(500);
+      $(self).toggleClass('expanded');
+      $(self)
+        .next()
+        .slideToggle(500, function () {
+          $('html,body').animate(
+            {
+              scrollTop: $(self).offset().top - 130
+            },
+            500
+          );
+        });
+    }
+  );
 
   /* TABBED CONTENT */
   $('.tabbed-content').on('click', '.tabbed-content__tab', function (e) {
@@ -550,7 +554,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var prepTrigger = document.querySelector('.prep-trigger');
   var contactTrigger = document.querySelector('.contact-trigger');
   var aboutTrigger = document.querySelector('.about-trigger');
-  
+
   // Get the off-canvas elements
   var offCanvas = document.querySelector('.offcanvas-menu--pre');
   var offCanvasPrep = document.querySelector('.offcanvas-menu--pre-prep');
@@ -612,8 +616,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Remove 'active' class from other off-canvas menu
     offCanvas.classList.remove('active');
   });
-
-
 
   // Add click event listener to the menu-close-sub elements
   menuCloseSubs.forEach(function (menuCloseSub) {

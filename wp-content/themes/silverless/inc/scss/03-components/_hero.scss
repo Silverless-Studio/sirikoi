@@ -13,6 +13,7 @@
 
   &__footer {
     background-color: $color-secondary;
+    border-top: 3px solid $color-supporting-3;
     display: grid;
     grid-column: 1 / -1;
     grid-template-rows: 0.75rem 2.5rem;
@@ -62,6 +63,10 @@
   }
 
   &__background {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
     img {
       // @include shadow($color-black);
       // @include border;
