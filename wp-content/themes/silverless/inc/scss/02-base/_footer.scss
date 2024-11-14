@@ -42,10 +42,10 @@ footer {
 
       &::after {
         // sass-lint:disable-block no-color-literals
-        background: linear-gradient(180deg, rgba($color-primary, 1) 0%, rgba($color-white, 0) 50%);
-        content: "";
-        inset: 0;
-        position: absolute;
+        // background: linear-gradient(180deg, rgba($color-primary, 1) 0%, rgba($color-white, 0) 50%);
+        // content: "";
+        // inset: 0;
+        // position: absolute;
       }
     }
 
@@ -127,7 +127,7 @@ footer {
     padding-left: 1rem;
 
     input {
-      &[type="email"] {
+      &[type='email'] {
         font-family: inherit;
         padding: 0.5rem;
         width: 100%;

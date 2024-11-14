@@ -1,5 +1,5 @@
 $color-primary: #072639;
-$color-secondary: #e31d1d;
+$color-secondary: #b74c2d;
 $color-tertiary: #467c9f;
 $color-white: #ffffff;
 $color-black: #000000;
@@ -29,8 +29,8 @@ $page-border-color: $color-white;
 $background-color: $color-supporting-3;
 $font-color: $color-grey;
 
-$color-footer: $color-primary;
-$color-footer-dark: darken($color-primary, 10);
+$color-footer: $color-secondary;
+$color-footer-dark: $color-secondary;
 
 $default-font-size: 1rem;
 $paragraph-spacing: 1.5rem;

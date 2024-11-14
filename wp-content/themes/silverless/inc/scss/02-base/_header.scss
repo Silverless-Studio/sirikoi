@@ -46,20 +46,24 @@
 }
 
 .mobile-burger {
+  border: 1px solid $color-white;
   cursor: pointer;
-  display: flex;
-  grid-column: -4 / -1;
-  justify-content: flex-end;
+  display: grid;
+  grid-column: -1;
+  height: 3.375rem;
+  padding: 0.5rem;
+  place-content: center;
+  width: 3.375rem;
 
   svg {
-    stroke: $color-secondary;
+    stroke: $color-white;
   }
 }
 
 .scrolled {
   .site-header {
+    background-color: $color-secondary;
     box-shadow: rgba(0, 0, 0, 0.35) 0 1.5rem 1rem -1.25rem;
-    background-color: $color-supporting-3;
   }
 }
 
@@ -76,7 +80,7 @@
     // sass-lint:disable-block no-color-literals
     backdrop-filter: blur(0.5rem);
     background-color: rgba($color-black, 0.3);
-    content: " ";
+    content: ' ';
     inset: 0;
     position: absolute;
   }
@@ -96,7 +100,7 @@
     &::before {
       background-color: $color-primary;
       bottom: 0;
-      content: " ";
+      content: ' ';
       display: block;
       height: 100vh;
       left: 0;
@@ -203,7 +207,7 @@
 
     &::before {
       background-color: $color-secondary;
-      content: " ";
+      content: ' ';
       display: block;
       height: 1px;
       left: -100%;
@@ -236,11 +240,11 @@
   .menu-item-has-children {
     & > a {
       &::after {
-        background: url("/wp-content/themes/silverless/inc/img/chevron.svg");
+        background: url('/wp-content/themes/silverless/inc/img/chevron.svg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
-        content: "";
+        content: '';
         height: 100%;
         position: absolute;
         right: 1rem;
