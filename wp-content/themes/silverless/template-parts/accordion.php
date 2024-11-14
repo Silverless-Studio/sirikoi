@@ -8,7 +8,7 @@ global $sidebar_content;
 
 <section
   class="container section-accordion spacer spacer__<?php echo $space_size; ?> <?php echo $sidebar_content ? "sidebar__content" : ""; ?>">
-  <div class="row">
+  <div class="row__10">
     <?php if (have_rows('records')) { ?>
       <div class="accordion">
         <?php while (have_rows('records')) { ?>

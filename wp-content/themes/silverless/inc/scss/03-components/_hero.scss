@@ -1,7 +1,7 @@
 .hero {
   display: grid;
   grid-template-rows: auto 8rem;
-  min-height: 100vh;
+  min-height: calc(100vh - $page-border-size);
   // padding-bottom: $page-border-size;
   // padding-top: $nav-menu-height;
   position: relative;
@@ -16,6 +16,7 @@
     display: grid;
     grid-column: 1 / -1;
     grid-template-rows: 0.75rem 2.5rem;
+    margin-top: 3px;
     padding: 1.375rem 0 2.625rem;
     row-gap: 0.5rem;
 
@@ -62,8 +63,8 @@
 
   &__background {
     img {
-      @include shadow($color-black);
-      @include border;
+      // @include shadow($color-black);
+      // @include border;
       height: 100%;
       object-fit: cover;
       object-position: var(--anchor-x) var(--anchor-y);
