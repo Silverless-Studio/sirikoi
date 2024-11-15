@@ -1052,7 +1052,6 @@ ul.small {
 }
 
 .heading {
-	color: #b74c2d;
 	font-family: "swear-display", serif;
 	font-weight: 300;
 	letter-spacing: 0.025em;
@@ -2372,9 +2371,6 @@ aside {
 }
 .section-accordion .accordion__record {
 	box-shadow: rgba(0, 0, 0, 0.35) 0.5rem 0.5rem 0.75rem;
-	border: 1px solid #467c9f;
-	border-radius: 0rem;
-	overflow: clip;
 	background-color: #ffffff;
 	padding: 1rem 2rem;
 }
@@ -2387,12 +2383,12 @@ aside {
 	justify-content: space-between;
 }
 .section-accordion .accordion__heading svg {
-	transform: rotate(0);
+	transform: rotate(90deg);
 	transform-origin: center;
 	transition: all ease 0.3s;
 }
 .section-accordion .accordion__heading.expanded svg {
-	transform: rotate(90deg);
+	transform: rotate(-90deg);
 }
 .section-accordion .accordion__content {
 	display: none;

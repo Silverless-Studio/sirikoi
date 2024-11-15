@@ -6,7 +6,7 @@
 
     &__record {
       @include shadow($color-black);
-      @include border(1px solid $color-tertiary);
+      // @include border(1px solid $color-tertiary);
       background-color: $color-white;
       padding: 1rem 2rem;
     }
@@ -19,14 +19,14 @@
       justify-content: space-between;
 
       svg {
-        transform: rotate(0);
+        transform: rotate(90deg);
         transform-origin: center;
         transition: all ease 0.3s;
       }
 
       &.expanded {
         svg {
-          transform: rotate(90deg);
+          transform: rotate(-90deg);
         }
       }
     }
