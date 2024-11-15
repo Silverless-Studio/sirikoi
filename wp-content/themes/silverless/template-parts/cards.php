@@ -38,7 +38,7 @@ global $sidebar_content;
 ?>
 
 <section
-    class="container section-cards <?php echo $space_size ? "spacer spacer__" . $space_size : ""; ?> <?php echo $sidebar_content ? "sidebar__content" : ""; ?>">
+    class="container section-cards <?php echo $space_size ? "spacer spacer__" . $space_size : ""; ?> <?php echo $sidebar_content ? "sidebar__content" : ""; ?> <?php echo esc_html ( get_sub_field('background_colour') ); ?>">
     <div
         class="row__<?php echo $container_width; ?> grid grid__<?php echo $cards_per_line; ?> additional-artwork-container">
         <?php get_template_part('template-parts/additional-artwork'); ?>

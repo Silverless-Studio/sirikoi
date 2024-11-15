@@ -30,6 +30,10 @@ body {
 section {
   background-color: var(--background-color);
   scroll-margin-top: 10rem;
+  &.light {
+    background-color: $color-bg-light;
+    padding: 8rem 0;
+  }
 }
 
 .fade-target {
