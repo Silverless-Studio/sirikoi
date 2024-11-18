@@ -14,11 +14,17 @@
     &__title {
       border-right: 1px solid $color-white;
       grid-column: 3/10;
+      @include respond(phone) {
+        display: none;
+      }
     }
     &__button {
       display: flex;
       grid-column: 10/14;
       justify-content: flex-end;
+      @include respond(phone) {
+        grid-column: 3 / 13;
+      }
     }
   }
 
@@ -58,6 +64,9 @@
         text-wrap: balance;
         border: 1px solid $color-white;
         width: auto;
+        @include respond(phone) {
+          width: 100%;
+        }
       }
     }
   }
@@ -137,7 +146,6 @@
 
     @include respond(tab-port) {
       row-gap: 1rem;
-      text-align: center;
 
       .heading {
         max-inline-size: none;
@@ -146,6 +154,7 @@
 
     @include respond(phone) {
       grid-column: 1 / -1;
+      padding: 0 1rem;
     }
   }
 

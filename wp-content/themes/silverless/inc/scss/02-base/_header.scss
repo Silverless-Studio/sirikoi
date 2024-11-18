@@ -8,6 +8,10 @@
   top: 0;
   transition: all 0.5s ease-in-out;
   z-index: 5;
+  @include respond(tab-port) {
+    left: 1rem;
+    right: 1rem;
+  }
 
   .grid {
     align-items: center;
@@ -26,7 +30,7 @@
   justify-content: flex-start;
 
   @include respond(tab-port) {
-    grid-column: 1 / 6;
+    grid-column: 2 / 6;
   }
 
   a {
@@ -57,6 +61,9 @@
 
   svg {
     stroke: $color-white;
+  }
+  @include respond(tab-port) {
+    grid-column: 10;
   }
 }
 
@@ -94,7 +101,7 @@
     padding-left: 6rem;
     padding-top: 0.5rem;
     position: absolute;
-    right: -100%;
+    right: -100vw;
     transition: all 0.3s ease-in-out;
     width: max-content;
 
@@ -291,7 +298,7 @@
 
       a {
         // FOR DEV
-        color: $color-error;
+        color: $color-black;
       }
 
       &.show {

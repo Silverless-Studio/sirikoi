@@ -45,6 +45,9 @@
       [center-start] repeat(12, [col-start] minmax(1px, 6.125rem) [col-end])
       [center-end];
   }
+  @include respond(tab-port) {
+    grid-gap: 0;
+  }
 
   .row {
     grid-column: center-start / center-end;

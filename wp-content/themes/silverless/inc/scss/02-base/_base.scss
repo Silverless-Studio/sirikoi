@@ -1,6 +1,9 @@
 body {
   background-color: $color-supporting-3;
   padding: $page-border-size;
+  @include respond(tab-port) {
+    padding: 1rem;
+  }
 }
 
 .site {
@@ -33,6 +36,9 @@ section {
   &.light {
     background-color: $color-bg-light;
     padding: 8rem 0;
+    @include respond(tab-port) {
+      padding: 1rem;
+    }
   }
 }
 

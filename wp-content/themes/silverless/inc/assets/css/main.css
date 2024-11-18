@@ -799,7 +799,7 @@ footer .copyright {
 	padding-left: 6rem;
 	padding-top: 0.5rem;
 	position: absolute;
-	right: -100%;
+	right: -100vw;
 	transition: all 0.3s ease-in-out;
 	width: -webkit-max-content;
 	width: -moz-max-content;
@@ -2740,6 +2740,12 @@ aside {
 	}
 }
 @media only screen and (max-width: 56.25em) {
+	body {
+		padding: 1rem;
+	}
+	section.light {
+		padding: 1rem;
+	}
 	:root {
 		--grid-gap: 2rem;
 		--container-margin: 2rem;
@@ -2760,6 +2766,21 @@ aside {
 	footer .copyright .sep {
 		display: none;
 	}
+	.footer__lower .socials {
+		display: flex;
+		justify-content: center;
+	}
+	.footer__lower .copyright {
+		display: flex;
+		justify-content: center;
+	}
+	.footer__lower .silverless {
+		display: flex;
+		justify-content: center;
+	}
+	.container {
+		grid-gap: 0;
+	}
 	.container .row__11 {
 		grid-column: center-start/center-end;
 	}
@@ -2778,18 +2799,24 @@ aside {
 	.container .row__6 {
 		grid-column: center-start/center-end;
 	}
+	.site-header {
+		left: 1rem;
+		right: 1rem;
+	}
 	.site-header .grid {
 		row-gap: 2rem;
 	}
 	.site-branding {
-		grid-column: 1/6;
+		grid-column: 2/6;
+	}
+	.mobile-burger {
+		grid-column: 10;
 	}
 	.offscreen-menu .offscreen-menu__content {
 		padding-left: 2rem;
 	}
 	.hero__heading {
 		row-gap: 1rem;
-		text-align: center;
 	}
 	.hero__heading .heading {
 		max-inline-size: none;
@@ -2834,6 +2861,9 @@ aside {
 	}
 	.section-leading-text > .grid {
 		row-gap: var(--grid-gap);
+	}
+	.card__horizontal .button {
+		width: 100%;
 	}
 	.section-video .video-wrapper {
 		grid-column: 1/-1;
@@ -2947,6 +2977,7 @@ aside {
 		padding-bottom: 3rem;
 	}
 	footer .contact-details {
+		align-items: center;
 		padding: 0 2rem;
 	}
 	footer .contact-details i {
@@ -3027,7 +3058,7 @@ aside {
 		top: 0;
 	}
 	.offscreen-menu .sub-menu a {
-		color: #b74c2d;
+		color: #141313;
 	}
 	.offscreen-menu .sub-menu.show {
 		display: none;
@@ -3046,11 +3077,21 @@ aside {
 		font-size: 1.9rem;
 		line-height: 2.2rem;
 	}
+	.hero .cta__title {
+		display: none;
+	}
+	.hero .cta__button {
+		grid-column: 3/13;
+	}
 	.hero__footer {
 		grid-column: center-start/center-end;
 	}
+	.hero__footer .hero__button .button {
+		width: 100%;
+	}
 	.hero__heading {
 		grid-column: 1/-1;
+		padding: 0 1rem;
 	}
 	.hero .additional-artwork {
 		width: 100%;

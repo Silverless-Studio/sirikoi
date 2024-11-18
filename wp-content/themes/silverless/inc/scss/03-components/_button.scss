@@ -62,5 +62,8 @@
   .button {
     background-color: $color-secondary;
     border: transparent;
+    @include respond(tab-port) {
+      width: 100%;
+    }
   }
 }
