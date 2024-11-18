@@ -71,6 +71,13 @@ global $video_modals;
         <?php } ?>
 
     </div>
+      <?php if ($enable_overlay) { ?>
+
+        <div class="hero__overlay"
+            style="--overlay-color: <?php echo $overlay_colour; ?>; --overlay-opacity: <?php echo $overlay_opacity; ?>;">
+        </div>
+
+        <?php } ?>
     <div class="row hero__<?php echo $hero_type; ?> hero__wrapper">
 
         <?php get_template_part('template-parts/additional-artwork'); ?>
@@ -79,13 +86,7 @@ global $video_modals;
 
 
 
-        <?php if ($enable_overlay) { ?>
-
-        <div class="hero__overlay"
-            style="--overlay-color: <?php echo $overlay_colour; ?>; --overlay-opacity: <?php echo $overlay_opacity; ?>;">
-        </div>
-
-        <?php } ?>
+      
 
         <div class="hero__content grid grid__12">
 

@@ -30,6 +30,7 @@
     grid-column: 1 / -1;
     margin-top: 3px;
     row-gap: 0.5rem;
+    z-index: 2;
 
     @include respond(phone) {
       grid-column: center-start / center-end;
@@ -96,7 +97,9 @@
 
   &__overlay {
     background-color: var(--overlay-color);
+    inset: 0;
     opacity: var(--overlay-opacity);
+    position: absolute;
   }
 
   &__content {

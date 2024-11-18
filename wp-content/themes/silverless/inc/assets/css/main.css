@@ -1234,6 +1234,7 @@ ul.small {
 	grid-column: 1/-1;
 	margin-top: 3px;
 	row-gap: 0.5rem;
+	z-index: 2;
 }
 .hero__footer .breadcrumbs {
 	line-height: 1;
@@ -1287,7 +1288,9 @@ ul.small {
 }
 .hero__overlay {
 	background-color: var(--overlay-color);
+	inset: 0;
 	opacity: var(--overlay-opacity);
+	position: absolute;
 }
 .hero__content {
 	align-items: center;
