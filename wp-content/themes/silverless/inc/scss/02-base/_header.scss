@@ -21,7 +21,7 @@
 }
 
 .site-branding {
-  grid-column: 2 / 6;
+  grid-column: 2 / 8;
   // height: $nav-menu-height;
   justify-content: flex-start;
 
@@ -49,7 +49,7 @@
   border: 1px solid $color-white;
   cursor: pointer;
   display: grid;
-  grid-column: -1;
+  grid-column: 12;
   height: 3.375rem;
   padding: 0.5rem;
   place-content: center;

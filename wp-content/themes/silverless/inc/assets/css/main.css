@@ -733,7 +733,7 @@ footer .copyright {
 }
 
 .site-branding {
-	grid-column: 2/6;
+	grid-column: 2/8;
 	justify-content: flex-start;
 }
 .site-branding a {
@@ -758,7 +758,7 @@ footer .copyright {
 	border: 1px solid #ffffff;
 	cursor: pointer;
 	display: grid;
-	grid-column: -1;
+	grid-column: 12;
 	height: 3.375rem;
 	padding: 0.5rem;
 	place-content: center;
@@ -1292,7 +1292,6 @@ ul.small {
 .hero__content {
 	align-items: center;
 	height: 100%;
-	padding: 0 1rem;
 }
 .hero__content.grid {
 	row-gap: 0;
