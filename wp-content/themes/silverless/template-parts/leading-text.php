@@ -21,7 +21,7 @@ global $sidebar_content;
     <?php get_template_part('template-parts/additional-artwork'); ?>
     <?php if ($primary_text) { ?>
       <div class="col-span__6">
-        <h2 class="heading heading__xl font__color__primary heading__underline">
+        <h2 class="heading heading__xl font__color__primary heading__border">
           <?php echo $primary_text; ?>
         </h2>
       </div>

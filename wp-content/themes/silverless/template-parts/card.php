@@ -47,7 +47,7 @@ if (isset($args['subtitle']) && $args['subtitle']) {
 
 $title_class = "heading heading__{$title_settings['font_size']} font__color__{$title_settings['colour']}";
 if ($title_settings['underline'])
-    $title_class .= " heading__underline";
+    $title_class .= " heading__border";
 if ($title_settings['italic'])
     $title_class .= " font__style__italic";
 
@@ -73,7 +73,7 @@ if ($subtitle_settings['italic'])
                     <h3 class="heading heading__sm heading__sm__alt font__color__tertiary">
                         <?php echo get_the_date('d.m.y'); ?>
                     </h3>
-                    <h2 class="heading heading__xl heading__underline font__color__primary">
+                    <h2 class="heading heading__xl heading__border font__color__primary">
                         <?php echo $title; ?>
                     </h2>
                 </div>

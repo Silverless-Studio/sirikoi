@@ -2,7 +2,7 @@
   background: none;
   left: 1.5rem;
   padding: 0;
-  padding-top: 0.5rem;
+  padding-top: 3.75rem;
   position: fixed;
   right: 1.5rem;
   top: 0;
@@ -22,7 +22,7 @@
 
 .site-branding {
   grid-column: 2 / 6;
-  height: $nav-menu-height;
+  // height: $nav-menu-height;
   justify-content: flex-start;
 
   @include respond(tab-port) {
@@ -64,6 +64,7 @@
   .site-header {
     background-color: $color-secondary;
     box-shadow: rgba(0, 0, 0, 0.35) 0 1.5rem 1rem -1.25rem;
+    padding: 1.875rem 0;
   }
 }
 

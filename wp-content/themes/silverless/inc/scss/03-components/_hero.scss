@@ -10,15 +10,25 @@
   &__small {
     min-height: min(calc(60vh - 1rem), 24rem);
   }
+  .cta {
+    &__title {
+      border-right: 1px solid $color-white;
+      grid-column: 3/10;
+    }
+    &__button {
+      display: flex;
+      grid-column: 10/14;
+      justify-content: flex-end;
+    }
+  }
 
   &__footer {
+    align-items: center;
     background-color: $color-secondary;
     border-top: 3px solid $color-supporting-3;
     display: grid;
     grid-column: 1 / -1;
-    grid-template-rows: 0.75rem 2.5rem;
     margin-top: 3px;
-    padding: 1.375rem 0 2.625rem;
     row-gap: 0.5rem;
 
     @include respond(phone) {
@@ -43,8 +53,6 @@
     }
 
     .hero__button {
-      grid-row: 2;
-
       .button {
         text-wrap: balance;
         width: auto;

@@ -39,6 +39,13 @@
     [center-end] minmax(calc(var(--container-margin) - var(--grid-gap)), 1fr)
     [full-end];
 
+  &--inner {
+    display: grid;
+    grid-template-columns:
+      [center-start] repeat(12, [col-start] minmax(1px, 6.125rem) [col-end])
+      [center-end];
+  }
+
   .row {
     grid-column: center-start / center-end;
     position: relative;
