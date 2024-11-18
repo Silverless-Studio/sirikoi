@@ -24,7 +24,7 @@ $current_page_id = get_the_ID();
                     }
                     ?>
                     <div class="<?php echo $tab_class; ?>" data-tab="<?php echo $index; ?>">
-                        <h3 class="heading heading__lg  font__family__primary">
+                        <h3 class="heading heading__md  font__family__primary">
                             <?php echo $title; ?>
                         </h3>
                         <?php echo get_template_part('/inc/img/arrow'); ?>
@@ -44,7 +44,7 @@ $current_page_id = get_the_ID();
                 ?>
                 <div class="tabbed-content__content" data-tab="<?php echo $index; ?>">
                     <?php if ($content_title) { ?>
-                      <h4 class="heading heading__xl heading__underline font__family__primary">
+                      <h4 class="heading heading__lg heading__underline font__family__primary">
                           <?php echo $content_title; ?>
                       </h4>
                     <?php } ?>
