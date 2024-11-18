@@ -13,7 +13,7 @@
 	background-color: #467c9f;
 }
 .background__color__black {
-	background-color: #000000;
+	background-color: #141313;
 }
 .background__color__grey {
 	background-color: #707070;
@@ -81,7 +81,7 @@
 	color: #ffffff;
 }
 .acf-field-select.colour-select select [value=black] {
-	background-color: #000000;
+	background-color: #141313;
 	color: #ffffff;
 }
 .acf-field-select.colour-select select [value=grey] {
@@ -90,7 +90,7 @@
 }
 .acf-field-select.colour-select select [value=white] {
 	background-color: #ffffff;
-	color: #000000;
+	color: #141313;
 }
 .acf-field-select.colour-select select [value=supporting_1] {
 	background-color: #00c426;
@@ -98,11 +98,11 @@
 }
 .acf-field-select.colour-select select [value=supporting_2] {
 	background-color: #e6e2de;
-	color: #000000;
+	color: #141313;
 }
 .acf-field-select.colour-select select [value=supporting_3] {
 	background-color: #f0edec;
-	color: #000000;
+	color: #141313;
 }
 
 .acf-flexible-content .layout {

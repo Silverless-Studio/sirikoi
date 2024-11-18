@@ -3,18 +3,17 @@ footer {
   position: relative;
 
   &.container {
+    background-color: $color-footer;
     row-gap: 0;
-
-    & > .row {
-      @include shadow($color-black);
-      @include border;
-    }
+    // & > .row {
+    //   @include shadow($color-black);
+    //   @include border;
+    // }
   }
 
   .footer {
     &__main {
-      background-color: $color-footer;
-      padding: 2.5rem 2rem 18rem;
+      padding: 2.5rem 0;
       position: relative;
       @include respond(phone) {
         padding-bottom: 3rem;
@@ -176,6 +175,41 @@ footer {
     display: flex;
   }
 
+  @include respond(tab-port) {
+    .logo,
+    .contact-details,
+    .silverless,
+    .copyright,
+    .nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .copyright {
+      .sep {
+        display: none;
+      }
+    }
+  }
+}
+
+.footer-mis-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+.footer__lower {
+  background-color: $color-footer;
+  margin-top: 3px;
+  padding: 1rem 0;
+  .socials {
+    a {
+      padding-right: 2rem;
+    }
+  }
   .silverless {
     .silverless-logo {
       height: auto;
@@ -214,30 +248,4 @@ footer {
       }
     }
   }
-
-  @include respond(tab-port) {
-    .logo,
-    .contact-details,
-    .silverless,
-    .copyright,
-    .nav {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .copyright {
-      .sep {
-        display: none;
-      }
-    }
-  }
-}
-
-.footer-mis-link {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin-bottom: 1rem;
 }

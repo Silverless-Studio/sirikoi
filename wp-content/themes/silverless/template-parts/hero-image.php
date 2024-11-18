@@ -220,8 +220,13 @@ if( $link ):
     </div>
 
 </section>
-  <?php
+<div class="container bread">
+    <div class="grid row__11 row-start__3">
+ <?php
         if ($show_breadcrumbs && function_exists('yoast_breadcrumb')) {
             yoast_breadcrumb('<div class="breadcrumbs paragraph small">', '</div>');
         }
         ?>
+    </div>
+</div>
+ 

@@ -28,13 +28,16 @@ $mis_link = get_field('mis_link', 'options');
     <div class="row">
         <div class="footer__main">
             <div class="footer__image">
-                <img src="<?php echo $background_image['sizes']['large']; ?>"
-                    alt="<?php echo $background_image['alt']; ?>" />
+
             </div>
             <div class="grid grid__12">
                 <div class="logo col-offset__2 col-span__3">
                     <a href="<?php echo site_url(); ?>" title="<?php the_field('header_title', 'options'); ?>">
-                        <img src="<?php echo $logo['sizes']['medium']; ?>" alt="<?php echo $logo['alt']; ?>" />
+                        <?php if ($logo):?><img src="<?php echo $logo['sizes']['medium']; ?>"
+                            alt="<?php echo $logo['alt']; ?>" /><?php endif;?><h2
+                            class="heading heading__logo font__color__white">
+                            <?php echo esc_html( get_field('logo_text','options') ); ?>
+                        </h2>
                     </a>
                 </div>
                 <div class="nav col-span__3">
@@ -96,41 +99,43 @@ $mis_link = get_field('mis_link', 'options');
                 </div>
             </div>
         </div>
-        <div class="footer__dark">
-            <div class="grid grid__12">
-                <div class="socials col-offset__2 col-span__3">
-                    <?php if (have_rows('socials', 'option')) { ?>
-                    <?php while (have_rows('socials', 'option')) { ?>
-                    <?php
+
+    </div>
+
+</footer><!-- #colophon -->
+<div class="footer__lower site-footer container font__color__white">
+
+    <div class="row grid grid__12">
+        <div class="socials col-offset__2 col-span__3">
+            <?php if (have_rows('socials', 'option')) { ?>
+            <?php while (have_rows('socials', 'option')) { ?>
+            <?php
 							the_row();
 							$icon = get_sub_field('icon');
 							$url = get_sub_field('link');
 							?>
-                    <a href="<?php echo $url['url']; ?>">
-                        <i class="fa-brands <?php echo $icon; ?>"></i>
-                    </a>
-                    <?php } ?>
-                    <?php } ?>
-                </div>
-                <div class="copyright col-offset__5 col-span__6">
-                    <p class="small">
-                        <span>©
-                            <?php echo date("Y"); ?> - All Rights Reserved
-                        </span>
-                        <span class="sep">&nbsp;|&nbsp;</span>
-                        <span>Pembroke House School</span>
-                    </p>
-                </div>
-                <div class="silverless col-span__2">
-                    <a href="https://silverless.co.uk">
-                        <?php get_template_part('inc/img/silverless-logo'); ?>
-                    </a>
-                </div>
-            </div>
+            <a href="<?php echo $url['url']; ?>">
+                <i class="fa-brands <?php echo $icon; ?>"></i>
+            </a>
+            <?php } ?>
+            <?php } ?>
+        </div>
+        <div class="copyright col-offset__5 col-span__6">
+            <p class="small">
+                <span>©
+                    <?php echo date("Y"); ?> - All Rights Reserved
+                </span>
+                <span class="sep">&nbsp;|&nbsp;</span>
+                <span>Pembroke House School</span>
+            </p>
+        </div>
+        <div class="silverless col-span__2">
+            <a href="https://silverless.co.uk">
+                <?php get_template_part('inc/img/silverless-logo'); ?>
+            </a>
         </div>
     </div>
-
-</footer><!-- #colophon -->
+</div>
 
 
 </div><!-- #page -->

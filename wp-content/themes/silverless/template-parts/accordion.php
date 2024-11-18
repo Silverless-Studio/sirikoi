@@ -19,7 +19,7 @@ global $sidebar_content;
           ?>
           <div class="accordion__record">
             <div class="accordion__heading">
-              <h3 class=" heading heading__lg ">
+              <h3 class="heading__md">
                 <?php echo $title; ?>
               </h3>
               <?php echo get_template_part('/inc/img/arrow'); ?>

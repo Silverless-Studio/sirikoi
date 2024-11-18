@@ -21,6 +21,22 @@ ul {
     font-size: $default-font-size * 0.8;
   }
 }
+.bread {
+  margin-bottom: 7rem;
+  .breadcrumbs {
+    text-transform: uppercase;
+    .breadcrumb_last {
+      color: $color-secondary;
+      padding: 0 1rem;
+    }
+    a {
+      padding: 0 1rem;
+      &:first-of-type {
+        padding: 0 1rem 0 0;
+      }
+    }
+  }
+}
 
 .tabbed-content,
 .section-leading-text,
@@ -111,7 +127,7 @@ ul {
   }
 
   &__md {
-    font-size: 1.1875rem;
+    font-size: 1.5rem;
     line-height: 1.625rem;
   }
 

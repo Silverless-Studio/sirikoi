@@ -172,7 +172,7 @@
 }
 .give-form-templates .give-form-wrap .give-section.introduction .description,
 .give-form-templates .give-receipt-wrap .give-section.introduction .description {
-	color: #707070;
+	color: #141313;
 	font-family: "retail-variable", sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
@@ -225,7 +225,7 @@
 }
 .give-form-templates .give-form-wrap .give-section.choose-amount .content,
 .give-form-templates .give-receipt-wrap .give-section.choose-amount .content {
-	color: #707070;
+	color: #141313;
 	font-family: "retail-variable", sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
@@ -285,7 +285,7 @@
 }
 .give-form-templates .give-form-wrap .give-section.payment .subheading,
 .give-form-templates .give-receipt-wrap .give-section.payment .subheading {
-	color: #707070;
+	color: #141313;
 	font-family: "retail-variable", sans-serif;
 	font-size: 1rem;
 	font-style: normal;
@@ -294,7 +294,7 @@
 }
 .give-form-templates .give-form-wrap .give-section.payment .form-row .give-input,
 .give-form-templates .give-receipt-wrap .give-section.payment .form-row .give-input {
-	color: #707070;
+	color: #141313;
 	font-family: "retail-variable", sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
@@ -324,7 +324,7 @@
 .give-form-templates .give-form-wrap .give-section.payment .give-donation-summary-section .give-donation-summary-table-wrapper tr th,
 .give-form-templates .give-receipt-wrap .give-section.payment .give-donation-summary-section .give-donation-summary-table-wrapper tr td,
 .give-form-templates .give-receipt-wrap .give-section.payment .give-donation-summary-section .give-donation-summary-table-wrapper tr th {
-	color: #707070;
+	color: #141313;
 }
 .give-form-templates .give-form-wrap .give-section.payment .give-donation-summary-section .give-donation-summary-table-wrapper tr td:first-child,
 .give-form-templates .give-form-wrap .give-section.payment .give-donation-summary-section .give-donation-summary-table-wrapper tr th:first-child,
@@ -346,7 +346,7 @@
 }
 .give-form-templates .give-form-wrap .give-section.receipt .message,
 .give-form-templates .give-receipt-wrap .give-section.receipt .message {
-	color: #707070;
+	color: #141313;
 	font-family: "retail-variable", sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
@@ -384,7 +384,7 @@
 }
 .give-form-templates .give-form-wrap .give-section.receipt .details .details-row .value,
 .give-form-templates .give-receipt-wrap .give-section.receipt .details .details-row .value {
-	color: #707070;
+	color: #141313;
 	font-family: "retail-variable", sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
