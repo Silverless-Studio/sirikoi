@@ -192,16 +192,16 @@ global $video_modals;
         <?php } ?>
 
     </div>
-
+<?php if(!is_front_page()):?>
     <div class="hero__footer row__extended">
         <div class="container">
 
-          <div class="cta__title">
- <h2 class="heading heading__lg font__color__white">
+            <div class="cta__title">
+                <h2 class="heading heading__lg font__color__white">
                     <?php echo esc_html( get_field('hero_link_cta','options') ); ?>
                 </h2>
-          </div>
-            <?php if ($hero_button) { ?>
+            </div>
+
             <div class="cta__button hero__button">
                 <?php 
 $link = get_field('hero_link','options');
@@ -210,23 +210,22 @@ if( $link ):
     $link_title = $link['title'];
     $link_target = $link['target'] ? $link['target'] : '_self';
     ?>
-    <a class="button button__alt" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-<?php endif; ?>
+                <a class="button button__alt" href="<?php echo esc_url( $link_url ); ?>"
+                    target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                <?php endif; ?>
             </div>
 
-            <?php } ?>
-            </div>
+        </div>
 
     </div>
-
+<?php endif; ?>
 </section>
 <div class="container bread">
     <div class="grid row__11 row-start__3">
- <?php
+        <?php
         if ($show_breadcrumbs && function_exists('yoast_breadcrumb')) {
             yoast_breadcrumb('<div class="breadcrumbs paragraph small">', '</div>');
         }
         ?>
     </div>
 </div>
- 

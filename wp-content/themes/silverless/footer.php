@@ -41,7 +41,7 @@ $mis_link = get_field('mis_link', 'options');
                     </a>
                 </div>
                 <div class="nav col-span__3">
-                    <h3 class="heading heading__lg">Quick Links</h3>
+                    <h3 class="heading heading__sm font__family__primary">Quick Links</h3>
                     <nav class="footer-navigation">
                         <?php
 						wp_nav_menu(
@@ -55,19 +55,22 @@ $mis_link = get_field('mis_link', 'options');
 						);
 						?>
                     </nav>
+                     <nav class="footer-navigation-legal">
+                        <?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'footer-menu-lower',
+								'menu_id' => 'footer-navigation-lower',
+								'menu_class' => 'small',
+								'items_wrap' => '<ul id="%1$s" data-visible="false" class="%2$s">%3$s</ul>',
+
+							)
+						);
+						?>
+                    </nav>
                 </div>
                 <div class="contact-details col-span__3 paragraph small">
-                    <h3 class="heading heading__lg">Contact Us</h3>
-                    <?php if ($contact_us_page) { ?>
-                    <a href="<?php echo $contact_us_page['url']; ?>" target="<?php echo $contact_us_page['target']; ?>">
-                        <?php echo $contact_us_page['title']; ?>
-                    </a>
-                    <?php } ?>
-                    <?php if ($register_page) { ?>
-                    <a href="<?php echo $register_page['url']; ?>" target="<?php echo $register_page['target']; ?>">
-                        <?php echo $register_page['title']; ?>
-                    </a>
-                    <?php } ?>
+                    <h3 class="heading heading__sm font__family__primary">Contact Us</h3>
                     <?php if (have_rows('contact_phone_numbers', 'option')) { ?>
                     <?php while (have_rows('contact_phone_numbers', 'option')) { ?>
                     <?php
@@ -75,7 +78,7 @@ $mis_link = get_field('mis_link', 'options');
 							$contact_phone_number = get_sub_field('contact_phone_number');
 							?>
                     <a href="tel://<?php echo $contact_phone_number; ?>">
-                        <i class="fa-solid fa-phone"></i>
+                        <i class="fa-light fa-phone"></i>
                         <?php echo $contact_phone_number; ?>
                     </a>
                     <?php } ?>
@@ -89,13 +92,16 @@ $mis_link = get_field('mis_link', 'options');
                         <i class="fa-regular fa-map"></i>
                         <?php echo $contact_address; ?>
                     </p>
-                    <?php if ($google_maps_link) { ?>
-                    <a href="<?php echo $google_maps_link['url']; ?>"
-                        target="<?php echo $google_maps_link['target']; ?>">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <?php echo $google_maps_link['title']; ?>
-                    </a>
-                    <?php } ?>
+                    <?php 
+$link = get_field('footer_link','options');
+if( $link ): 
+    $link_url = $link['url'];
+    $link_title = $link['title'];
+    $link_target = $link['target'] ? $link['target'] : '_self';
+    ?>
+    <a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+<?php endif; ?>
+                  
                 </div>
             </div>
         </div>

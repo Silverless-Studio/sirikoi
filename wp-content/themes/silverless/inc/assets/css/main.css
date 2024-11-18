@@ -383,6 +383,9 @@ footer .footer__image img {
 	object-position: 60%;
 	width: 100%;
 }
+footer .footer-navigation-legal {
+	margin-top: 2rem;
+}
 footer .footer__dark {
 	background-color: #b74c2d;
 	padding: 1.5rem 2rem;
@@ -409,6 +412,7 @@ footer .nav li:not(:last-child) {
 footer .contact-details {
 	display: flex;
 	flex-direction: column;
+	height: 100%;
 }
 footer .contact-details * + *:not(:last-child) {
 	margin-bottom: 1rem;
@@ -417,11 +421,14 @@ footer .contact-details a,
 footer .contact-details p {
 	position: relative;
 }
+footer .contact-details p {
+	flex: 1;
+}
 footer .contact-details i {
 	left: -1.5rem;
 	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 0;
+	transform: translateY(50%);
 }
 footer .contact-form {
 	border-left: 1px solid #ffffff;
@@ -1112,7 +1119,7 @@ ul.small {
 }
 .heading__sm {
 	font-family: "retail-variable", sans-serif;
-	font-size: 0.75rem;
+	font-size: 1.25rem;
 	line-height: 1rem;
 }
 .heading__sm__alt {
@@ -1172,6 +1179,9 @@ ul.small {
 }
 .font__weight__regular {
 	font-weight: 400;
+}
+.font__family__primary {
+	font-family: "retail-variable", sans-serif;
 }
 
 .js-on .fm-above.visible,
@@ -1241,6 +1251,7 @@ ul.small {
 }
 .hero__footer .hero__button .button {
 	text-wrap: balance;
+	border: 1px solid #ffffff;
 	width: auto;
 }
 .hero__wrapper, .hero__slide {
@@ -1563,6 +1574,19 @@ ul.small {
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5rem;
+}
+.button__404 {
+	color: #b74c2d;
+	display: flex;
+	font-size: 1.5rem;
+}
+.button__404 .button__arrow {
+	align-items: center;
+	display: flex;
+	margin-right: 2rem;
+}
+.button__404 .button__arrow svg {
+	rotate: 180deg;
 }
 
 .card__horizontal .button {
@@ -2646,6 +2670,26 @@ aside {
 	padding-top: calc(20vh - 0.5rem);
 }
 
+.error404 .hero {
+	align-content: center;
+}
+.error404 .hero img {
+	height: 100%;
+	inset: 0;
+	-o-object-fit: cover;
+	object-fit: cover;
+	position: absolute;
+	width: 100%;
+}
+.error404 .hero .hero__posts__title .row {
+	grid-column: 3/10;
+}
+.error404 .hero__overlay {
+	height: 100%;
+	inset: 0;
+	position: absolute;
+	width: 100%;
+}
 @media only screen and (min-width: calc(56.25em + 1px)) {
 	.sidebar__container .container {
 		grid-template-columns: [center-start] repeat(var(--content-width), [col-start] minmax(0.1rem, 2.6875rem) [col-end]) [center-end];
@@ -2658,7 +2702,6 @@ aside {
 		grid-column: center-start/full-end;
 	}
 }
-
 @media only screen and (min-width: 62.5em) {
 	.js-on .fm-above,
 	.js-on .fm-left,
@@ -2676,7 +2719,6 @@ aside {
 		transform: translateX(3rem);
 	}
 }
-
 @media only screen and (min-width: 75em) and (max-height: 41em) {
 	.hero__heading {
 		grid-column: 2/span 11;
@@ -2690,13 +2732,11 @@ aside {
 		display: none;
 	}
 }
-
 @media only screen and (max-width: 75em) {
 	.grid:not(.grid__non-responsive).grid__4 {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 }
-
 @media only screen and (max-width: 56.25em) {
 	:root {
 		--grid-gap: 2rem;
@@ -2896,7 +2936,6 @@ aside {
 		scroll-margin-top: 25vh;
 	}
 }
-
 @media only screen and (max-width: 37.5em) {
 	:root {
 		--grid-gap: 1rem;

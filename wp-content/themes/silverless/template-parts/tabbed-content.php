@@ -3,7 +3,7 @@
 $space_size = get_sub_field('space_size');
 global $sidebar_content;
 $post_id = get_the_ID();
-
+$current_page_id = get_the_ID();
 ?>
 
 <section
@@ -24,7 +24,7 @@ $post_id = get_the_ID();
                     }
                     ?>
                     <div class="<?php echo $tab_class; ?>" data-tab="<?php echo $index; ?>">
-                        <h3 class="heading heading__lg">
+                        <h3 class="heading heading__lg  font__family__primary">
                             <?php echo $title; ?>
                         </h3>
                         <?php echo get_template_part('/inc/img/arrow'); ?>
@@ -44,7 +44,7 @@ $post_id = get_the_ID();
                 ?>
                 <div class="tabbed-content__content" data-tab="<?php echo $index; ?>">
                     <?php if ($content_title) { ?>
-                      <h4 class="heading heading__xl heading__underline font__color__primary">
+                      <h4 class="heading heading__xl heading__underline font__family__primary">
                           <?php echo $content_title; ?>
                       </h4>
                     <?php } ?>

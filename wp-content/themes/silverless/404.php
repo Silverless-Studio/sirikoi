@@ -17,37 +17,27 @@ $overlay_opacity = get_field('404_hero_overlay_opacity', 'options');
 ?>
 
 <section class="container hero">
-	<div class="row__extended">
-		<div class="hero__wrapper hero__wrapper__small">
-			<div class="hero__background">
-				<img src="<?php echo $background_image['url']; ?>" alt="<?php echo $background_image['alt']; ?>" />
-			</div>
-			<?php if ($enable_overlay) { ?>
-				<div class="hero__overlay"
-					style="--overlay-color: <?php echo $overlay_colour; ?>; --overlay-opacity: <?php echo $overlay_opacity; ?>;">
+	<img src="<?php echo $background_image['url']; ?>" alt="<?php echo $background_image['alt']; ?>" />
+	<div class="hero__overlay"
+					style="--overlay-color:#000000; --overlay-opacity: 0.3;">
 				</div>
-			<?php } ?>
-			<div class="hero__navigation hero__navigation__down js_scroll-next-section">
-				<?php echo get_template_part('/inc/img/chevron'); ?>
-			</div>
-		</div>
+	<div class="row__extended">
 		<div class="container hero__posts__title">
-			<h2 class="row heading heading__xs">
-				Error 404
-			</h2>
-			<h1 class="row heading heading__xxl">
-				OOPS! This doesn’t look right.
+			
+			<h1 class="row heading heading__xxl font__color__white">
+				404 Error
 			</h1>
 			<div class="row">
-				<a href="<?php echo home_url(); ?>" class="button button__secondary button__404">
-					<div class="button__text">
-						<span class="heading heading__sm">
-							CLICK HERE TO GET BACK SOMEWHERE FAMILIAR
-						</span>
-					</div>
+				<a href="<?php echo home_url(); ?>" class="button__404">
 					<div class="button__arrow">
 						<?php echo get_template_part('/inc/img/arrow'); ?>
 					</div>
+					<div class="button__text">
+						<span class="heading heading__sm">
+							Return
+						</span>
+					</div>
+					
 				</a>
 			</div>
 		</div>

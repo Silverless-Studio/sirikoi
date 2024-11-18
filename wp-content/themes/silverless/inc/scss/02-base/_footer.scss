@@ -47,6 +47,9 @@ footer {
         // position: absolute;
       }
     }
+    &-navigation-legal {
+      margin-top: 2rem;
+    }
 
     &__dark {
       background-color: $color-footer-dark;
@@ -85,6 +88,7 @@ footer {
   .contact-details {
     display: flex;
     flex-direction: column;
+    height: 100%;
 
     @include respond(phone) {
       padding: 0 2rem;
@@ -100,12 +104,15 @@ footer {
     p {
       position: relative;
     }
+    p {
+      flex: 1;
+    }
 
     i {
       left: -1.5rem;
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 0;
+      transform: translateY(50%);
 
       @include respond(tab-port) {
         left: -1rem;

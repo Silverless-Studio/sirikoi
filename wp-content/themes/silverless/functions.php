@@ -50,6 +50,7 @@ function silverless_setup()
 			'main-menu' => esc_html__('Primary', 'silverless'),
 			'sub-menu' => esc_html__('Secondary', 'silverless'),
 			'footer-menu' => esc_html__('Footer', 'silverless'),
+			'footer-menu-lower' => esc_html__('Legal', 'silverless'),
 			'pre-menu' => esc_html__('Pre Prep', 'silverless'),
 			'prep-menu' => esc_html__('Prep', 'silverless'),
 			'contact-menu' => esc_html__('Contact', 'silverless'),

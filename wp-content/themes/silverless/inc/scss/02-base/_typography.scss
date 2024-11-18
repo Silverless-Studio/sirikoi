@@ -133,7 +133,7 @@ ul {
 
   &__sm {
     font-family: $font-primary;
-    font-size: 0.75rem;
+    font-size: 1.25rem;
     line-height: 1rem;
 
     &__alt {
@@ -216,6 +216,11 @@ ul {
 
     &__regular {
       font-weight: 400;
+    }
+  }
+  &__family {
+    &__primary {
+      font-family: $font-primary;
     }
   }
 }
