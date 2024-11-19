@@ -918,8 +918,15 @@ footer .copyright {
 	z-index: 1;
 }
 .offscreen-menu .sub-menu .menu-item a {
+	font-size: 1rem;
 	padding: 1rem;
 	padding-right: 0;
+}
+.offscreen-menu .sub-menu .menu-item:first-of-type a {
+	padding-top: 0;
+}
+.offscreen-menu .sub-menu .menu-item:last-of-type a {
+	padding-bottom: 0;
 }
 .offscreen-menu .sub-menu::before {
 	background-color: #141313;

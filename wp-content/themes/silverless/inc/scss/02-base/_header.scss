@@ -208,8 +208,19 @@
 
     .menu-item {
       a {
+        font-size: 1rem;
         padding: 1rem;
         padding-right: 0;
+      }
+      &:first-of-type {
+        a {
+          padding-top: 0;
+        }
+      }
+      &:last-of-type {
+        a {
+          padding-bottom: 0;
+        }
       }
     }
 
