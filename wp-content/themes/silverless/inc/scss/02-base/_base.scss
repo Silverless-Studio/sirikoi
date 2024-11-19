@@ -41,6 +41,9 @@ section {
     }
   }
 }
+.light + .light {
+  padding-top: 0rem;
+}
 
 .fade-target {
   img,

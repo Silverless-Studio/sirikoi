@@ -336,6 +336,10 @@ section.light {
 	padding: 8rem 0;
 }
 
+.light + .light {
+	padding-top: 0rem;
+}
+
 .fade-target img.fade,
 .fade-target video.fade {
 	opacity: 1;
@@ -1035,7 +1039,7 @@ ul.small {
 .tabbed-content strong,
 .section-leading-text strong,
 .section-text-block strong {
-	color: #467c9f;
+	color: #b74c2d;
 }
 .tabbed-content ul,
 .section-leading-text ul,
@@ -1525,6 +1529,10 @@ ul.small {
 	font-weight: 400;
 }
 
+.read-more-block.border-bottom {
+	border-bottom: 1px solid #b74c2d;
+	padding-bottom: 2rem;
+}
 .read-more-block .read-more-content {
 	display: none;
 }

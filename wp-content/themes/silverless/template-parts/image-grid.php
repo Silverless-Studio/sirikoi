@@ -20,7 +20,7 @@ if ($responsive) {
 ?>
 
 <section
-  class="container section-image spacer spacer__<?php echo $space_size; ?> <?php echo $sidebar_content ? "sidebar__content" : ""; ?>">
+  class="container section-image spacer spacer__<?php echo $space_size; ?> <?php echo $sidebar_content ? "sidebar__content" : ""; ?> <?php echo esc_html ( get_sub_field('background_colour') ); ?>">
   <?php if (count($gallery) > 0) { ?>
     <div class="image__grid row__<?php echo $container_width; ?> <?php echo $collapse; ?>">
       <div

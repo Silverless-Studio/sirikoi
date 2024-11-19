@@ -1,4 +1,9 @@
 .read-more-block {
+  &.border-bottom {
+    border-bottom: 1px solid $color-secondary;
+    padding-bottom: 2rem;
+  }
+
   .read-more-content {
     display: none;
 

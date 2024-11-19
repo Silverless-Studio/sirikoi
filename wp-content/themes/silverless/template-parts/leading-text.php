@@ -16,7 +16,7 @@ global $sidebar_content;
 ?>
 
 <section
-  class="container section-leading-text spacer spacer__<?php echo $space_size; ?> <?php echo $sidebar_content ? "sidebar__content" : ""; ?>">
+  class="container section-leading-text spacer spacer__<?php echo $space_size; ?> <?php echo $sidebar_content ? "sidebar__content" : ""; ?> <?php echo esc_html ( get_sub_field('background_colour') ); ?>">
   <div class="row__10 grid grid__10 additional-artwork-container">
     <?php get_template_part('template-parts/additional-artwork'); ?>
     <?php if ($primary_text) { ?>
@@ -26,7 +26,7 @@ global $sidebar_content;
         </h2>
       </div>
     <?php } ?>
-    <div class="read-more-block col-span__6">
+    <div class="read-more-block col-span__6 <?php if(get_sub_field('border_bottom')): echo 'border-bottom'; endif;?>">
       <?php echo $content; ?>
       <?php if ($enable_read_more && $read_more_content) { ?>
         <div class="read-more-content">

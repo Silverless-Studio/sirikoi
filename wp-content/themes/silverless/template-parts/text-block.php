@@ -21,7 +21,7 @@ global $sidebar_content;
 ?>
 
 <section
-  class="container section-text-block spacer spacer__<?php echo $space_size; ?> <?php echo $sidebar_content ? "sidebar__content" : ""; ?>">
+  class="container section-text-block spacer spacer__<?php echo $space_size; ?> <?php echo $sidebar_content ? "sidebar__content" : ""; ?> <?php echo esc_html ( get_sub_field('background_colour') ); ?>">
 
   <div class="row">
 
