@@ -1301,7 +1301,6 @@ ul.small {
 }
 .hero__heading {
 	grid-column: 2/span 10;
-	grid-row: 2;
 	margin-top: 15vh;
 	padding: 0;
 	padding-bottom: 3.125rem;
