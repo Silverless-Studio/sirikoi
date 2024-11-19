@@ -865,6 +865,7 @@ footer .copyright {
 	margin-top: 1rem;
 }
 .offscreen-menu .menu-item:not(.button) a {
+	background-color: #b74c2d;
 	padding: 1rem 2.5rem 1rem 1rem;
 	position: relative;
 	z-index: 2;
@@ -904,7 +905,7 @@ footer .copyright {
 	transform: translateY(0);
 }
 .offscreen-menu .sub-menu {
-	border-left: 1px solid #b74c2d;
+	border-left: 1px solid #141313;
 	left: calc(100% + 2rem);
 	opacity: 0;
 	position: absolute;
@@ -921,11 +922,11 @@ footer .copyright {
 	padding-right: 0;
 }
 .offscreen-menu .sub-menu::before {
-	background-color: #b74c2d;
+	background-color: #141313;
 	content: " ";
 	display: block;
 	height: 1px;
-	left: -100%;
+	left: -50%;
 	position: absolute;
 	right: 0;
 	top: 50%;
@@ -1118,7 +1119,7 @@ ul.small {
 	line-height: 1.625rem;
 }
 .heading__md {
-	font-size: 1.5rem;
+	font-size: 1.75rem;
 	line-height: 1.625rem;
 }
 .heading__sm {
@@ -1208,7 +1209,7 @@ ul.small {
 	fill: #ffffff;
 }
 .svg__cross {
-	fill: #072639;
+	fill: #ffffff;
 }
 
 .hero {
@@ -1637,7 +1638,7 @@ ul.small {
 .card__vertical .card__content {
 	align-items: center;
 	flex-grow: 1;
-	gap: 1.5rem;
+	gap: 4rem;
 	grid-column: span 1;
 	grid-row: 2;
 	justify-content: center;
@@ -2634,6 +2635,13 @@ aside {
 }
 .navigation__previous {
 	transform: rotate(180deg);
+}
+
+.nav-button {
+	padding-bottom: 5rem;
+}
+.nav-button .button {
+	margin-top: 2rem;
 }
 
 .map {

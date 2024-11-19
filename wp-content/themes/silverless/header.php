@@ -73,12 +73,26 @@ $logo = get_field('logo', 'options');
                                 [
                                     'theme_location' => 'main-menu',
                                     'menu_id' => 'main-navigation',
-                                    'menu_class' => 'main-navigation-list heading heading__md',
+                                    'menu_class' => 'main-navigation-list heading heading__md font__family__primary',
                                     'items_wrap' => '<ul id="%1$s" data-visible="false" class="%2$s">%3$s</ul>',
                                 ]
                             );
                             ?>
                         </nav>
+                        <div class="nav-button">
+                            <h2 class="heading heading__md font__color__white">
+                    <?php echo esc_html( get_field('navigation_heading','options') ); ?>
+                </h2>
+                <?php 
+$link = get_field('navigation_donate_button','options');
+if( $link ): 
+    $link_url = $link['url'];
+    $link_title = $link['title'];
+    $link_target = $link['target'] ? $link['target'] : '_self';
+    ?>
+    <a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+<?php endif; ?>
+                        </div>
                     </div>
                     <div class="offcanvas-menu--pre">
                         <div class="menu-close-sub">
