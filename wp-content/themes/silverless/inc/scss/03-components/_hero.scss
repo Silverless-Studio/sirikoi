@@ -1,7 +1,7 @@
 .hero {
   display: grid;
   grid-template-rows: auto 8rem;
-  min-height: calc(100vh - $page-border-size);
+  min-height: calc(100vh - 3rem);
   // padding-bottom: $page-border-size;
   // padding-top: $nav-menu-height;
   position: relative;

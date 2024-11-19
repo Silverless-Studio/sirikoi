@@ -1214,7 +1214,7 @@ ul.small {
 .hero {
 	display: grid;
 	grid-template-rows: auto 8rem;
-	min-height: calc(100vh - 1.5rem);
+	min-height: calc(100vh - 3rem);
 	position: relative;
 	row-gap: 0;
 }
