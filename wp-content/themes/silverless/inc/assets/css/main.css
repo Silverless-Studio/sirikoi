@@ -965,7 +965,7 @@ footer .copyright {
 }
 
 .offcanvas-menu--pre, .offcanvas-menu--pre-prep, .offcanvas-menu--contact, .offcanvas-menu--about {
-	background: #072639;
+	background: #b74c2d;
 	display: none;
 	flex-direction: column;
 	height: 100vh;
@@ -989,6 +989,9 @@ footer .copyright {
 .offcanvas-menu--pre .menu-close-sub svg, .offcanvas-menu--pre-prep .menu-close-sub svg, .offcanvas-menu--contact .menu-close-sub svg, .offcanvas-menu--about .menu-close-sub svg {
 	cursor: pointer;
 	transform: rotate(180deg);
+}
+.offcanvas-menu--pre .menu-close-sub svg path, .offcanvas-menu--pre-prep .menu-close-sub svg path, .offcanvas-menu--contact .menu-close-sub svg path, .offcanvas-menu--about .menu-close-sub svg path {
+	fill: white;
 }
 .offcanvas-menu--pre .menu-items-sub, .offcanvas-menu--pre-prep .menu-items-sub, .offcanvas-menu--contact .menu-items-sub, .offcanvas-menu--about .menu-items-sub {
 	display: flex;

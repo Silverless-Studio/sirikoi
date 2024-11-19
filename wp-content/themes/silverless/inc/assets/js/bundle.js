@@ -595,27 +595,27 @@ document.addEventListener('DOMContentLoaded', function () {
     offCanvas.classList.remove('active');
   });
 
-  // Add click event listener to the contact-trigger element
-  contactTrigger.addEventListener('click', function () {
-    // Prevent the default action of the link
+  // // Add click event listener to the contact-trigger element
+  // contactTrigger.addEventListener('click', function () {
+  //   // Prevent the default action of the link
 
-    // Add the 'active' class to the off-canvas contact element
-    offCanvasContact.classList.add('active');
+  //   // Add the 'active' class to the off-canvas contact element
+  //   offCanvasContact.classList.add('active');
 
-    // Remove 'active' class from other off-canvas menu
-    offCanvas.classList.remove('active');
-  });
+  //   // Remove 'active' class from other off-canvas menu
+  //   offCanvas.classList.remove('active');
+  // });
 
-  // Add click event listener to the about-trigger element
-  aboutTrigger.addEventListener('click', function () {
-    // Prevent the default action of the link
+  // // Add click event listener to the about-trigger element
+  // aboutTrigger.addEventListener('click', function () {
+  //   // Prevent the default action of the link
 
-    // Add the 'active' class to the off-canvas contact element
-    offCanvasAbout.classList.add('active');
+  //   // Add the 'active' class to the off-canvas contact element
+  //   offCanvasAbout.classList.add('active');
 
-    // Remove 'active' class from other off-canvas menu
-    offCanvas.classList.remove('active');
-  });
+  //   // Remove 'active' class from other off-canvas menu
+  //   offCanvas.classList.remove('active');
+  // });
 
   // Add click event listener to the menu-close-sub elements
   menuCloseSubs.forEach(function (menuCloseSub) {

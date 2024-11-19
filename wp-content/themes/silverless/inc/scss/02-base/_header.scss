@@ -328,7 +328,7 @@
   &--pre-prep,
   &--contact,
   &--about {
-    background: $color-primary;
+    background: $color-secondary;
     display: none;
     flex-direction: column;
     height: 100vh;
@@ -357,6 +357,9 @@
       svg {
         cursor: pointer;
         transform: rotate(180deg);
+        path {
+          fill: white;
+        }
       }
     }
 
