@@ -10,7 +10,7 @@ $video_modals = [];
 
 ?>
 
-<div class="page-layout page-layout__<?php echo $page_layout; ?>">
+<div class="page-layout page-layout__default">
 
 	<?php
 
@@ -21,11 +21,6 @@ $video_modals = [];
 			get_template_part('template-parts/' . str_replace('_', '-', $row_layout));
 		endwhile;
 	endif;
-
-	// Handle possible missing "Sidebar - End" flex component
-	if ($sidebar_content) {
-		echo '</div>';
-	}
 
 	?>
 
