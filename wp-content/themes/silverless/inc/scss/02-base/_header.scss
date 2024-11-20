@@ -205,6 +205,12 @@
     transition: all 0.3s ease-in;
     width: max-content;
     z-index: 1;
+    .pre-trigger,
+    .prep-trigger {
+      a {
+        font-size: 1.5rem;
+      }
+    }
 
     .menu-item {
       a {
@@ -214,6 +220,7 @@
       }
       &:first-of-type {
         a {
+          font-size: 1.5rem;
           padding-top: 0;
         }
       }

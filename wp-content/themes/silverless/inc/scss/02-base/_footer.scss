@@ -113,7 +113,7 @@ footer {
       left: -1.5rem;
       position: absolute;
       top: 0;
-      transform: translateY(50%);
+      // transform: translateY(50%);
 
       @include respond(tab-port) {
         left: -1rem;

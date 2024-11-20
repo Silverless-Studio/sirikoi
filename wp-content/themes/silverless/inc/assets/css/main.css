@@ -432,7 +432,6 @@ footer .contact-details i {
 	left: -1.5rem;
 	position: absolute;
 	top: 0;
-	transform: translateY(50%);
 }
 footer .contact-form {
 	border-left: 1px solid #ffffff;
@@ -917,12 +916,17 @@ footer .copyright {
 	width: max-content;
 	z-index: 1;
 }
+.offscreen-menu .sub-menu .pre-trigger a,
+.offscreen-menu .sub-menu .prep-trigger a {
+	font-size: 1.5rem;
+}
 .offscreen-menu .sub-menu .menu-item a {
 	font-size: 1rem;
 	padding: 1rem;
 	padding-right: 0;
 }
 .offscreen-menu .sub-menu .menu-item:first-of-type a {
+	font-size: 1.5rem;
 	padding-top: 0;
 }
 .offscreen-menu .sub-menu .menu-item:last-of-type a {
