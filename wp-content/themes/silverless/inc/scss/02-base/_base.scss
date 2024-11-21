@@ -70,7 +70,8 @@ section {
   a {
     color: $color-white;
   }
-  span {
+  span,
+  .breadcrumbs .breadcrumb_last {
     color: $color-white;
   }
 }

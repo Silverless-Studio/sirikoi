@@ -363,7 +363,8 @@ section.dark .button {
 .bread:has(~ .dark) a {
 	color: #ffffff;
 }
-.bread:has(~ .dark) span {
+.bread:has(~ .dark) span,
+.bread:has(~ .dark) .breadcrumbs .breadcrumb_last {
 	color: #ffffff;
 }
 
