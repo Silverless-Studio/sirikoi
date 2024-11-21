@@ -40,6 +40,23 @@ section {
       padding: 1rem;
     }
   }
+  &.dark {
+    background-color: $color-secondary;
+    padding: 8rem 0;
+    @include respond(tab-port) {
+      padding: 1rem;
+    }
+    p,
+    .heading {
+      color: $color-white;
+    }
+    .heading__border {
+      border-color: $color-white;
+    }
+    .button {
+      border: 1px solid $color-white !important;
+    }
+  }
 }
 .light + .light {
   padding-top: 0rem;

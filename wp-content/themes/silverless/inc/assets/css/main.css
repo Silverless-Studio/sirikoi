@@ -335,6 +335,20 @@ section.light {
 	background-color: #e6e2df;
 	padding: 8rem 0;
 }
+section.dark {
+	background-color: #b74c2d;
+	padding: 8rem 0;
+}
+section.dark p,
+section.dark .heading {
+	color: #ffffff;
+}
+section.dark .heading__border {
+	border-color: #ffffff;
+}
+section.dark .button {
+	border: 1px solid #ffffff !important;
+}
 
 .light + .light {
 	padding-top: 0rem;
@@ -2774,6 +2788,9 @@ aside {
 		padding: 1rem;
 	}
 	section.light {
+		padding: 1rem;
+	}
+	section.dark {
 		padding: 1rem;
 	}
 	:root {
