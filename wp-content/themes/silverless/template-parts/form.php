@@ -21,7 +21,7 @@ global $sidebar_content;
 
 <section
   class="container section-form section-contact-details spacer spacer__<?php echo $space_size; ?> <?php echo $sidebar_content ? "sidebar__content" : ""; ?>">
-  <div class="row grid grid__12 contact-details">
+  <div class="row__10 grid grid__12 contact-details">
     <div class="col-offset__2 col-span__3 contact-details__details paragraph small">
 
       <h2 class="heading heading__lg">Contact Us</h2>
@@ -73,7 +73,7 @@ global $sidebar_content;
 <?php else:?>
   <section
   class="container section-form spacer spacer__<?php echo $space_size; ?>">
-  <div class="row">
+  <div class="row__10">
     
       <?php echo do_shortcode($form_shortcode); ?>
 
