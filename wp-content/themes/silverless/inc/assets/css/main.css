@@ -354,6 +354,19 @@ section.dark .button {
 	padding-top: 0rem;
 }
 
+.bread:has(~ .dark) {
+	background-color: #b74c2d;
+	margin-bottom: 0;
+	margin-top: 1rem;
+	padding-top: 2rem;
+}
+.bread:has(~ .dark) a {
+	color: #ffffff;
+}
+.bread:has(~ .dark) span {
+	color: #ffffff;
+}
+
 .fade-target img.fade,
 .fade-target video.fade {
 	opacity: 1;
