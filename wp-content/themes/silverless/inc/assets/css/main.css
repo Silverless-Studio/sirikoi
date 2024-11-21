@@ -1750,7 +1750,7 @@ ul.small {
 	padding: 2rem;
 }
 .card__horizontal .card__content__padding__lg {
-	padding: 4.75rem 0 5.75rem;
+	padding: 0 0 5.75rem;
 }
 .card__content {
 	display: flex;
