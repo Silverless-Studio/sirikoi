@@ -279,6 +279,8 @@ jQuery(document).ready(function ($) {
     if ($(menuItem).hasClass('menu-item-has-children')) {
       e.preventDefault();
       $('.sub-menu').removeClass('show');
+      $('.menu-item a').removeClass('show');
+      $(this).addClass('show');
       $(this).next('.sub-menu').addClass('show');
     }
   });

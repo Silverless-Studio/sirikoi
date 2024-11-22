@@ -84,6 +84,9 @@
   right: 0;
   top: 0;
   transition: all 0.3s ease-in-out;
+  @include respond(tab-port) {
+    top: -1rem;
+  }
 
   &::before {
     // sass-lint:disable-block no-color-literals
@@ -162,7 +165,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .menu-item {
@@ -181,6 +184,14 @@
         padding: 1rem 2.5rem 1rem 1rem;
         position: relative;
         z-index: 2;
+        &.show {
+          color: $color-black;
+          margin-right: 1.5rem;
+          padding: 1rem;
+          &:after {
+            content: none;
+          }
+        }
       }
     }
 
@@ -298,6 +309,9 @@
           width: calc(100vw - 1rem);
         }
       }
+    }
+    .main-navigation-list {
+      justify-content: flex-start;
     }
 
     .menu-main-menu-container {
