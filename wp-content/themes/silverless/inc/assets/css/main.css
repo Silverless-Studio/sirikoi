@@ -2838,6 +2838,9 @@ aside {
 	section.dark {
 		padding: 1rem;
 	}
+	.bread:has(~ .dark) {
+		padding: 2rem 1rem 0 1rem;
+	}
 	:root {
 		--grid-gap: 2rem;
 		--container-margin: 2rem;
@@ -3052,7 +3055,7 @@ aside {
 		display: block;
 		margin: 0;
 		order: 1;
-		padding: 0.5rem 1rem;
+		padding: 1rem;
 	}
 	.section-tabbed-content .tabbed-content__tab.active:after {
 		opacity: 1;
