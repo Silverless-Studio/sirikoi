@@ -12,7 +12,8 @@ global $sidebar_content;
 
 <section
     class="container section-cta spacer spacer__<?php echo $space_size; ?> <?php echo $sidebar_content ? "sidebar__content" : ""; ?>">
-    <div class="row__8 cta cta__wrapper cta__large fade-target">
+    <div class="row cta cta__wrapper cta__large fade-target">
+        <div class="background-fade"></div>
         <div class="cta__image">
             <img class="fade" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
         </div>

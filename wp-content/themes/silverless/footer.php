@@ -132,7 +132,7 @@ if( $link ):
                     <?php echo date("Y"); ?> - All Rights Reserved
                 </span>
                 <span class="sep">&nbsp;|&nbsp;</span>
-                <span>Pembroke House School</span>
+                <span>SIRIKOI Trust</span>
             </p>
         </div>
         <div class="silverless col-span__2">

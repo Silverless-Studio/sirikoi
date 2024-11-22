@@ -16,8 +16,8 @@
   width: max-content;
 
   &:hover {
-    background: darken($color-secondary, 20%);
-    border-color: darken($color-secondary, 20%);
+    background: #b74c2d;
+    border-color: white;
   }
 
   &:not(.button__no-arrow) {
@@ -43,6 +43,10 @@
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5rem;
+    &:hover {
+      background: #b74c2d;
+      border-color: #b74c2d;
+    }
   }
   &__404 {
     color: $color-secondary;

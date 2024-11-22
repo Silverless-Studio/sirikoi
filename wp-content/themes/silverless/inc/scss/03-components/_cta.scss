@@ -1,6 +1,6 @@
 .section-cta {
   .cta {
-    @include shadow($color-black);
+    // @include shadow($color-black);
     @include border;
     text-align: left;
 
@@ -30,6 +30,7 @@
     &__image {
       inset: 0;
       position: absolute;
+      z-index: -1;
 
       img {
         height: 100%;
@@ -51,6 +52,15 @@
         align-items: center;
       }
     }
+  }
+  .background-fade {
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0) 80%
+    );
+    inset: 0;
+    position: absolute;
   }
 
   @include respond(phone) {

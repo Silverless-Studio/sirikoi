@@ -127,7 +127,7 @@ ul {
   }
 
   &__md {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     line-height: 1.625rem;
   }
 
@@ -142,7 +142,7 @@ ul {
     }
   }
 
-  &__underline {
+  &__underline:not(&.heading__border) {
     margin-bottom: 1rem;
 
     &::after {

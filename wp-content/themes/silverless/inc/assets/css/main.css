@@ -1161,7 +1161,7 @@ ul.small {
 	line-height: 1.625rem;
 }
 .heading__md {
-	font-size: 1.75rem;
+	font-size: 1.5rem;
 	line-height: 1.625rem;
 }
 .heading__sm {
@@ -1173,10 +1173,10 @@ ul.small {
 	font-style: italic;
 	line-height: 1.375rem;
 }
-.heading__underline {
+.heading__underline:not(.heading.heading__border) {
 	margin-bottom: 1rem;
 }
-.heading__underline::after {
+.heading__underline:not(.heading.heading__border)::after {
 	border-bottom: 1px solid #b74c2d;
 	content: "";
 	display: block;
@@ -1602,8 +1602,8 @@ ul.small {
 	width: max-content;
 }
 .button:hover {
-	background: #652a19;
-	border-color: #652a19;
+	background: #b74c2d;
+	border-color: white;
 }
 .button:not(.button__no-arrow) {
 	padding: 0.5rem 5rem 0.5rem 1.75rem;
@@ -1626,6 +1626,10 @@ ul.small {
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5rem;
+}
+.button__alt:hover {
+	background: #b74c2d;
+	border-color: #b74c2d;
 }
 .button__404 {
 	color: #b74c2d;
@@ -1689,7 +1693,7 @@ ul.small {
 }
 .card__vertical .card__content__info {
 	align-items: flex-start;
-	color: #707070;
+	color: #141313;
 	text-align: left;
 }
 .card__vertical .card__content__info .heading__underline {
@@ -1716,6 +1720,7 @@ ul.small {
 .card__vertical__tall.grid .card__content {
 	align-items: flex-start;
 	grid-row: 2;
+	padding: 4rem 2.5rem;
 }
 .card__vertical.card__image__badge .card__content, .card__vertical.card__image__none .card__content {
 	align-items: center;
@@ -1787,7 +1792,6 @@ ul.small {
 	width: 100%;
 }
 .card__image__sticky.card__image img {
-	box-shadow: rgba(20, 19, 19, 0.35) 0.5rem 0.5rem 0.75rem;
 	border: none;
 	border-radius: 0rem;
 	overflow: clip;
@@ -1817,14 +1821,23 @@ ul.small {
 	text-align: center;
 }
 .card__image__default .card__image:not(.card__image__sticky) {
-	box-shadow: rgba(20, 19, 19, 0.35) 0.5rem 0.5rem 0.75rem;
 	border: none;
 	border-radius: 0rem;
 	overflow: clip;
 	background-color: #ffffff;
 }
+.card__image__default .heading__lg {
+	font-family: "retail-variable", sans-serif;
+	line-height: 2.2rem;
+}
+.card__image__default .button {
+	background-color: #b74c2d;
+	border-color: transparent;
+}
+.card__image__default .button:hover {
+	background: #501d13;
+}
 .card__image__background {
-	box-shadow: rgba(20, 19, 19, 0.35) 0.5rem 0.5rem 0.75rem;
 	border: none;
 	border-radius: 0rem;
 	overflow: clip;
@@ -1859,7 +1872,7 @@ ul.small {
 }
 .card__image__background .card__content {
 	min-height: 20rem;
-	padding: 3.125rem 2.5rem;
+	padding: 8rem 2.5rem;
 }
 .card__image__background .card__content__info {
 	color: #ffffff;
@@ -1943,7 +1956,6 @@ ul.small {
 }
 
 .section-cta .cta {
-	box-shadow: rgba(20, 19, 19, 0.35) 0.5rem 0.5rem 0.75rem;
 	border: none;
 	border-radius: 0rem;
 	overflow: clip;
@@ -1968,6 +1980,7 @@ ul.small {
 .section-cta .cta__image {
 	inset: 0;
 	position: absolute;
+	z-index: -1;
 }
 .section-cta .cta__image img {
 	height: 100%;
@@ -1987,6 +2000,11 @@ ul.small {
 }
 .section-cta .cta__content .grid {
 	align-items: center;
+}
+.section-cta .background-fade {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 80%);
+	inset: 0;
+	position: absolute;
 }
 
 .section-text-block .heading {

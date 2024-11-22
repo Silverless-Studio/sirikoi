@@ -79,7 +79,7 @@ if ($subtitle_settings['italic'])
                 </div>
             <?php } else { ?>
                 <?php if ($title) { ?>
-                    <h2 class="<?php echo $title_class; ?>">
+                    <h2 class="<?php echo $title_class; ?> heading__underline">
                         <?php echo $title; ?>
                     </h2>
                 <?php } ?>
