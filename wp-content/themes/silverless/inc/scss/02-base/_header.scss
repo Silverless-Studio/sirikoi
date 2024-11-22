@@ -11,6 +11,7 @@
   @include respond(tab-port) {
     left: 1rem;
     right: 1rem;
+    top: 1rem;
   }
 
   .grid {
@@ -161,7 +162,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .menu-item {
@@ -258,7 +259,7 @@
   .current-page-parent {
     &:not(.menu-item-type-custom) {
       & > a {
-        color: $color-primary;
+        color: $color-white;
       }
     }
   }
@@ -338,7 +339,7 @@
     background: $color-secondary;
     display: none;
     flex-direction: column;
-    height: 100vh;
+    height: 60vh;
     inset: 0;
     justify-content: center;
     padding-top: 0.5rem;
@@ -352,6 +353,12 @@
           background-color: transparent;
         }
       }
+    }
+    .menu-admin {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 1rem;
     }
 
     .menu-close-sub {
@@ -374,8 +381,8 @@
       display: flex;
       flex-direction: column;
       flex-grow: 1;
-      justify-content: center;
-      margin-top: -5rem;
+      justify-content: flex-start;
+      // margin-top: -5rem;
     }
 
     &.active {

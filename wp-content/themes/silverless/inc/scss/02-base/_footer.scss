@@ -121,7 +121,7 @@ footer {
 
       @include respond(phone) {
         display: block;
-        margin-right: 0.5rem;
+        margin-bottom: 0.25rem;
         position: static;
         transform: none;
       }
@@ -220,6 +220,9 @@ footer {
     }
     a {
       padding-right: 2rem;
+      @include respond(phone) {
+        padding: 0 1rem;
+      }
     }
   }
   .copyright {

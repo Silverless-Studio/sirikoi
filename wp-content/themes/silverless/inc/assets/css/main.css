@@ -880,7 +880,7 @@ footer .copyright {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	justify-content: center;
+	justify-content: flex-start;
 }
 .offscreen-menu .menu-item {
 	opacity: 0;
@@ -981,7 +981,7 @@ footer .copyright {
 }
 .offscreen-menu .current-menu-item:not(.menu-item-type-custom) > a,
 .offscreen-menu .current-page-parent:not(.menu-item-type-custom) > a {
-	color: #072639;
+	color: #ffffff;
 }
 .offscreen-menu .menu-item-has-children > a::after {
 	background: url("/wp-content/themes/silverless/inc/img/chevron.svg");
@@ -1000,7 +1000,7 @@ footer .copyright {
 	background: #b74c2d;
 	display: none;
 	flex-direction: column;
-	height: 100vh;
+	height: 60vh;
 	inset: 0;
 	justify-content: center;
 	padding-top: 0.5rem;
@@ -1010,6 +1010,12 @@ footer .copyright {
 }
 .offcanvas-menu--pre .menu-item:not(.button) a, .offcanvas-menu--pre-prep .menu-item:not(.button) a, .offcanvas-menu--contact .menu-item:not(.button) a, .offcanvas-menu--about .menu-item:not(.button) a {
 	background-color: transparent;
+}
+.offcanvas-menu--pre .menu-admin, .offcanvas-menu--pre-prep .menu-admin, .offcanvas-menu--contact .menu-admin, .offcanvas-menu--about .menu-admin {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 1rem;
 }
 .offcanvas-menu--pre .menu-close-sub, .offcanvas-menu--pre-prep .menu-close-sub, .offcanvas-menu--contact .menu-close-sub, .offcanvas-menu--about .menu-close-sub {
 	align-items: center;
@@ -1029,8 +1035,7 @@ footer .copyright {
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
-	justify-content: center;
-	margin-top: -5rem;
+	justify-content: flex-start;
 }
 .offcanvas-menu--pre.active, .offcanvas-menu--pre-prep.active, .offcanvas-menu--contact.active, .offcanvas-menu--about.active {
 	transform: translateX(0);
@@ -2881,6 +2886,7 @@ aside {
 	.site-header {
 		left: 1rem;
 		right: 1rem;
+		top: 1rem;
 	}
 	.site-header .grid {
 		row-gap: 2rem;
@@ -3031,10 +3037,11 @@ aside {
 		width: 0px;
 	}
 	.section-tabbed-content .tabbed-content__tab.active {
+		border: 1px solid #b74c2d;
 		display: block;
-		margin: 0 1rem;
+		margin: 0;
 		order: 1;
-		padding: 0.5rem 0;
+		padding: 0.5rem 1rem;
 	}
 	.section-tabbed-content .tabbed-content__tab.active:after {
 		opacity: 1;
@@ -3061,7 +3068,7 @@ aside {
 	}
 	footer .contact-details i {
 		display: block;
-		margin-right: 0.5rem;
+		margin-bottom: 0.25rem;
 		position: static;
 		transform: none;
 	}
@@ -3071,6 +3078,9 @@ aside {
 	}
 	footer .socials {
 		justify-content: center;
+	}
+	.footer__lower .socials a {
+		padding: 0 1rem;
 	}
 	.grid {
 		gap: calc(var(--grid-gap) * 2) var(--grid-gap);

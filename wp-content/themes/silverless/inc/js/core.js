@@ -259,6 +259,8 @@ jQuery(document).ready(function ($) {
   $('header').on('click', '.menu-close svg', function () {
     $('header').removeClass('mobile-menu-open');
     $('.sub-menu').removeClass('show');
+    $('.offcanvas-menu--pre').removeClass('active');
+    $('.offcanvas-menu--pre-prep').removeClass('active');
   });
 
   $('header .menu-item.menu-item-has-children').each(function () {

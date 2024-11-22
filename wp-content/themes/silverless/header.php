@@ -47,9 +47,11 @@ $logo = get_field('logo', 'options');
             <div class="row grid grid__12 grid__non-responsive">
                 <div class="site-branding">
                     <a href="<?php echo site_url(); ?>" title="<?php the_field('header_title', 'options'); ?>">
-                        <?php if ($logo):?><img src="<?php echo $logo['sizes']['medium']; ?>" alt="<?php echo $logo['alt']; ?>" /><?php endif;?><h2 class="heading heading__logo font__color__white">
-                    <?php echo esc_html( get_field('logo_text','options') ); ?>
-                </h2>
+                        <?php if ($logo):?><img src="<?php echo $logo['sizes']['medium']; ?>"
+                            alt="<?php echo $logo['alt']; ?>" /><?php endif;?><h2
+                            class="heading heading__logo font__color__white">
+                            <?php echo esc_html( get_field('logo_text','options') ); ?>
+                        </h2>
                     </a>
                 </div>
                 <div class="mobile-burger">
@@ -81,22 +83,28 @@ $logo = get_field('logo', 'options');
                         </nav>
                         <div class="nav-button">
                             <h2 class="heading heading__md font__color__white">
-                    <?php echo esc_html( get_field('navigation_heading','options') ); ?>
-                </h2>
-                <?php 
+                                <?php echo esc_html( get_field('navigation_heading','options') ); ?>
+                            </h2>
+                            <?php 
 $link = get_field('navigation_donate_button','options');
 if( $link ): 
     $link_url = $link['url'];
     $link_title = $link['title'];
     $link_target = $link['target'] ? $link['target'] : '_self';
     ?>
-    <a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-<?php endif; ?>
+                            <a class="button" href="<?php echo esc_url( $link_url ); ?>"
+                                target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                            <?php endif; ?>
                         </div>
                     </div>
                     <div class="offcanvas-menu--pre">
-                        <div class="menu-close-sub">
-                            <?php get_template_part('inc/img/arrow'); ?>
+                        <div class="menu-admin">
+                            <div class="menu-close-sub">
+                                <?php get_template_part('inc/img/arrow'); ?>
+                            </div>
+                            <div class="menu-close">
+                                <?php get_template_part('inc/img/cross'); ?>
+                            </div>
                         </div>
                         <?php
                         wp_nav_menu(
@@ -110,8 +118,13 @@ if( $link ):
                     </div>
 
                     <div class="offcanvas-menu--pre-prep">
-                        <div class="menu-close-sub">
-                            <?php get_template_part('inc/img/arrow'); ?>
+                      <div class="menu-admin">
+                            <div class="menu-close-sub">
+                                <?php get_template_part('inc/img/arrow'); ?>
+                            </div>
+                            <div class="menu-close">
+                                <?php get_template_part('inc/img/cross'); ?>
+                            </div>
                         </div>
                         <?php
                         wp_nav_menu(
