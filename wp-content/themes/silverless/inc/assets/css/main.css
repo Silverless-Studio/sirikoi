@@ -1088,8 +1088,9 @@ ul.small {
 .bread .breadcrumbs a {
 	padding: 0 1rem;
 }
-.bread .breadcrumbs a:first-of-type {
-	padding: 0 1rem 0 0;
+
+.breadcrumbs span > span:first-child > a {
+	padding-left: 0;
 }
 
 .tabbed-content strong,
