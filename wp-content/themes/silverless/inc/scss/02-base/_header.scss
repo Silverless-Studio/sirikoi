@@ -397,6 +397,16 @@
       flex-grow: 1;
       justify-content: flex-start;
       // margin-top: -5rem;
+      ul {
+        li {
+          &:first-of-type {
+            font-size: 1.5rem;
+            a {
+              color: $color-black;
+            }
+          }
+        }
+      }
     }
 
     &.active {
