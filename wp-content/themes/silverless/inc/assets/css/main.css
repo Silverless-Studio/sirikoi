@@ -311,16 +311,14 @@ body {
 	position: relative;
 }
 .site::before {
-	background-image: var(--background-image);
-	background-position: top center;
-	background-repeat: repeat;
+	background-color: #f0edec;
 	content: "";
 	display: block;
-	inset: 0;
-	opacity: var(--background-image-opacity);
-	pointer-events: none;
-	position: absolute;
-	z-index: 0;
+	height: 1rem;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 99;
 }
 .site .page-layout {
 	position: relative;
