@@ -290,12 +290,12 @@
           }
 
           &::after {
-            // sass-lint:disable-block no-color-literals
-            background: linear-gradient(
-              0deg,
-              rgba($color-black, 0.7) 30%,
-              rgba($color-black, 0) 50%
-            );
+            background: rgba(
+              20,
+              19,
+              19,
+              0.4
+            ); /* Solid color with 20% opacity */
             content: ' ';
             inset: 0;
             position: absolute;
@@ -345,5 +345,35 @@
         }
       }
     }
+  }
+}
+.section-cards {
+  .grid__3 {
+    .card__image__default {
+      .card__content {
+        padding: 0;
+        &__info {
+          padding: 0 2rem;
+        }
+        &__actions {
+          width: 100%;
+          a {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+.card__vertical__tall {
+  &.card__image__background .card__image::after {
+    background: linear-gradient(
+      0deg,
+      rgba(20, 19, 19, 0.7) 30%,
+      rgba(20, 19, 19, 0) 50%
+    );
+    content: ' ';
+    inset: 0;
+    position: absolute;
   }
 }

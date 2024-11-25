@@ -1617,7 +1617,7 @@ ul.small {
 }
 .button:hover {
 	background: #b74c2d;
-	border-color: white;
+	border-color: transparent;
 }
 .button:not(.button__no-arrow) {
 	padding: 0.5rem 5rem 0.5rem 1.75rem;
@@ -1879,7 +1879,7 @@ ul.small {
 	height: 100%;
 }
 .card__image__background .card__image::after {
-	background: linear-gradient(0deg, rgba(20, 19, 19, 0.7) 30%, rgba(20, 19, 19, 0) 50%);
+	background: rgba(20, 19, 19, 0.4); /* Solid color with 20% opacity */
 	content: " ";
 	inset: 0;
 	position: absolute;
@@ -1899,6 +1899,26 @@ ul.small {
 .card__image__background .card__content .heading__underline::after {
 	border-color: #ffffff;
 }
+.section-cards .grid__3 .card__image__default .card__content {
+	padding: 0;
+}
+.section-cards .grid__3 .card__image__default .card__content__info {
+	padding: 0 2rem;
+}
+.section-cards .grid__3 .card__image__default .card__content__actions {
+	width: 100%;
+}
+.section-cards .grid__3 .card__image__default .card__content__actions a {
+	width: 100%;
+}
+
+.card__vertical__tall.card__image__background .card__image::after {
+	background: linear-gradient(0deg, rgba(20, 19, 19, 0.7) 30%, rgba(20, 19, 19, 0) 50%);
+	content: " ";
+	inset: 0;
+	position: absolute;
+}
+
 .section-carousel.container {
 	row-gap: 0;
 }
