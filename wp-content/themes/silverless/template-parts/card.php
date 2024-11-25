@@ -63,7 +63,7 @@ if ($subtitle_settings['italic'])
     <div
         class="card__image <?php echo $sticky_image; ?> <?php echo $image_fit; ?> col-span__<?php echo $image_width; ?>">
         <?php if ($image) { ?>
-            <img class="fade" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+            <img class="fade" style="--image-offset: 0 <?php the_sub_field('image_offset'); ?>%" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
         <?php } ?>
     </div>
     <div class="card__content <?php echo $content_padding; ?> col-span__<?php echo $content_width; ?>">

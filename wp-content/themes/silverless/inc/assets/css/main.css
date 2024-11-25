@@ -1823,6 +1823,8 @@ ul.small {
 .card__image__cover img {
 	-o-object-fit: cover;
 	object-fit: cover;
+	-o-object-position: var(--image-offset);
+	object-position: var(--image-offset);
 }
 .card__image__contain {
 	aspect-ratio: 1;
