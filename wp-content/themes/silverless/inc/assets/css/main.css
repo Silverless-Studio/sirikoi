@@ -780,7 +780,7 @@ footer .copyright {
 	object-position: left;
 	padding: 0;
 	transition: all 0.5s ease-in-out;
-	width: 100%;
+	width: 50%;
 }
 
 .mobile-burger {
@@ -800,7 +800,7 @@ footer .copyright {
 .scrolled .site-header {
 	background-color: #b74c2d;
 	box-shadow: rgba(0, 0, 0, 0.35) 0 1.5rem 1rem -1.25rem;
-	padding: 1.875rem 0;
+	padding: 1.875rem 0 0.875rem;
 }
 
 .offscreen-menu {
