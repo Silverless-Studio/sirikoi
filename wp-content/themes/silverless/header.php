@@ -48,10 +48,11 @@ $logo = get_field('logo', 'options');
                 <div class="site-branding">
                     <a href="<?php echo site_url(); ?>" title="<?php the_field('header_title', 'options'); ?>">
                         <?php if ($logo):?><img src="<?php echo $logo['sizes']['medium']; ?>"
-                            alt="<?php echo $logo['alt']; ?>" /><?php endif;?><h2
+                            alt="<?php echo $logo['alt']; ?>" /><?php else:?><h2
                             class="heading heading__logo font__color__white">
                             <?php echo esc_html( get_field('logo_text','options') ); ?>
                         </h2>
+                        <?php endif;?>
                     </a>
                 </div>
                 <div class="mobile-burger">
